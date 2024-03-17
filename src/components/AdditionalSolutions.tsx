@@ -5,7 +5,7 @@ import ImgThirdCard from '../img/main/AditionalSolutions/img-2.png'
 
 export default function AdditionalSolution() {
   return (
-    <div className={`flex flex-col w-[80%] items-start m-auto mt-10`}>
+    <div className={`flex flex-col w-[80%] items-start m-auto mt-`}>
         
         <h1 className={`  w-[80%]  text-[2.5rem] font-extrabold`}>Наши <span className={`text-[#E3010F] bold`}> дополнительные <br/> решения</span> для Вашей кухни</h1>
 <div className={`w-[80%]  h-[5px] items-start mt-3

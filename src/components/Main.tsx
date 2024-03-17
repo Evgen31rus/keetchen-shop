@@ -3,8 +3,12 @@ import AdditionalSolution from "./AdditionalSolutions"
 import Designers from "./Designers"
 import HelpInSearching from "./HelpInSearching"
 import InfoWorks from "./InfoWorks"
+import KitchenAvertising from "./KitchenAvertising"
 import MainButton from "./MainButton"
+import KitchenSales from "./kitchenSales"
 import ProductCard from "./productCard"
+import Reviews from "./Reviews"
+import BannerZone from "./BannerZone"
 
 type propsTypes = {
     props: IProductsObgect[]
@@ -75,6 +79,30 @@ className={`top-menu-shadow w-[80%] h-[50px] p-5 border-[1px] rounded `}/>
 </div>
 <div className={`w-[100%]  max-w-[1000px] `}>
 <AdditionalSolution/>
+</div>
+<div className={`w-[100%]  max-w-[1000px] `}>
+<KitchenAvertising/>
+</div>
+<div className={`w-[100%]  max-w-[1000px] `}>
+<KitchenSales/>
+</div>
+<div className={`w-[100%]  max-w-[1000px] `}>
+<Reviews/>
+</div>
+
+<div className={` header-banner relative flex w-[100%] max-w-[1000px] h-[500px] bg-no-repeat bg-cover bg-center 
+        sm:w-[100%] ` }>
+            <BannerZone/>
+ </div>
+
+ <div className={`w-[100%]  max-w-[1000px] `}>
+<Reviews/>
+</div>
+<div className={`w-[100%]  max-w-[1000px] `}>
+<Reviews/>
+</div>
+<div className={`w-[100%]  max-w-[1000px] `}>
+<Reviews/>
 </div>
 
 </div>

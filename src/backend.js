@@ -1,6 +1,7 @@
-let backend = [
+let backend = 
 
     {
+        menu: ['Цены', 'Акция' , 'Материалы', 'Как заказать', 'Наши работы', 'Отзывы' , 'Контакты'], 
         products: [
 {
     productID: 1,
@@ -85,9 +86,56 @@ let backend = [
 },
 
 
+        ],
+
+        kitchenArguments: [
+{
+    id: 21,
+    photo: 'https://s3-alpha-sig.figma.com/img/4e4b/1c12/e691597781bd0431e9beb3bed5b9bb9d?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hKO8PY9ltwreLhX37u2S36AOc3jh-CGCz~0YXZRP5hwIkFYCB~SnG0f35EAhxu4pA7VOO8e57biqt~Uws5S6o7KgO10oup9aJQCo98n68Lb1a74Mu2gFYhOGzetdz0CsxcU1clHjO6Jr-HZMllKS3b1YHwVnhu~MSI7M3SyVLn~SHeJ0OtHFRGcwAvV9mA399EE3nUWHCIqaU1YNfNgwfaYbLNO3g0EA5CRr8NBtRexYLeiJ4BmFPdstZStPvDC1fpCdb3Ju87N~UJDZSJX9Hsf3I2JMzdrN1LbQimbv-DgVRy0Y1Itfc7O5510rA~~EDX6Wb~0sj4eb1UmkA7wb4g__',
+    title:'Современные фасады',
+    description: `Наши фасады на 40% долговечнее обычных, так как они влагоустойчивы и не подвержены повреждениям. В наличии более 250 фактур и 2000 оттенков. 									`,
+
+},
+{
+    id: 22,
+    photo: 'https://s3-alpha-sig.figma.com/img/4ab1/7114/afeacb341987879e7d0cd1a87c7f9d7a?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YjtcVLnDXm58keQfeBmotKb2UQMm5gF4Rqr-RiTYCwQnlfAA6xu9uHBeKITCxMF1105Se7iCzT-FAYl-hwzs0kpaPl5NFiXQZwChmepvejfak5xd~6J7ExEm6m9Fz9kSMic8we6GLAodQEmNFxi-cGhHwMnwKFkeiMg3AthPaMGobb0cu6xbOwmVCyR2XI~suoagKsbmoLviiVds7zMVRZ06jb60zsgpZSDcEezg3ShgJIdA8fuIx1P2ECsqBKaHuCjxs7cjQISIqANo~2pHG0nN9EIYgsVpF3dVqmth2AyMbOczsx9LUppXw-t~Gvm3mxbszzmwXH3G8IDbP06T-Q__',
+    title:'Прочные столешницы',
+    description: 'Наши столешницы на 25% прочнее и в 2 раза влагоустойчивее чем обычные. В наличии 10 покрытий и 170 вариантов расцветок и фактур.',
+
+},
+{
+    id: 23,
+    photo: 'https://s3-alpha-sig.figma.com/img/035f/ecff/843d81d0d926153a3b53b65d9e39b47c?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UOT3Y5FUMQyz2~yu8oY5Vm5TOzAspB5Oi9oHu7WNfoKmdh5C9vvyl4z79Pl2g0WMA6VHu8hspUcwS4RkOa0w5pmDDIUM9oT5uuEJVrVNWX1TFanHB6by0XKHOPIoX-8MYYiDs1kizqmMGpBpBfncgORIDtjUo~hjh8~WgPyEmSztSPDTMxzl19Ws00VY1v~7K2cpm9-f9j3MOGMGkDBzfRS8CQ3X2NvRH6GQNV9VCZ-en2tg4YD-H3cXxIo6-cI6wsWGBpqaJgrGkGbcOg~PTC-74ZuVLBRZBaqarpCtaKzmQjwfjU69CjOvZ6EGcwABbEhr~pUObsor7TSZnhmWDg__',
+    title:'Долговечная и функциональная фурнитура',
+    description: 'Выдерживает более 20 лет службы. Создает максимальный комфорт и удобство пользования кухней.',
+
+},
+{
+    id: 24,
+    photo: 'https://s3-alpha-sig.figma.com/img/a721/4f08/0947f3bf67eb4110a540bff125569cc7?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KTIbza9houAr-KMuwgaOWJcOUZpCZTkTdrWDzLpWtB2Ch8h~FGtmavj5KvMG7jpbmTA5IW7QaoERiBeNtz3F66pq5NiuywEkYREnwTVgyDLyswHyZANz3kZHjeXMPz5rXde2enXji~SBD5yafid9mcX0~Lh47IzPLjBPrsarBaYHu1ZI-I-dS7VRsLwG04IRV0XArHuLKE~3H6lmrzzNcHEXHkNXmEPENeDsdAi2fZNAgdT~v9OJ4b2LuyTFaVEqX03ijmt~YkiPwmq0KFecu2A0WUUPRdkWUUw8dSnyuymPYgfQlPFce33o2d-hb1hkDYX0kS6gTGBCZHtEMKbfHw__',
+    title:'Полный комплект документов',
+    description: 'Вы получите: договор, кассовый чек, гарантийный талон и правила эксплуатации. Это гарантирует защиту Ваших прав.',
+
+},
+{
+    id: 25,
+    photo: 'https://s3-alpha-sig.figma.com/img/825c/5b72/268f978faa57aa860d7318829124409c?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c4UIHXW1ECGcjD1IS01T5Mv6tJzd7032D48XtUDQVcK0~oKOov9kKk8ztCqzACaO5NBqP11JoMKdNfrH4dRL5~2~w0BYEWY-KRyCuCK8L4PDvibdfMaUFkewMU-aj3V82Us2EFzvYE-fZ3vIDUzS7ERtxVvlnqJ9C3CPn1H5OXJ4Cxn3Y5Q3jC79HWw-jGgHTNoB-U0M4g9IwcWV4YKNkrukfFSM3543t3dqAQcYaTFVLq6p0dgbPkF-pGydh1Zhb7YDUvYXZ-1KSPDGx9CSdUyoK2nig9FTlNCPfzWCfKdWSuo7UvT2t~UBUgr3GTWfdFvmgeKhUqyySDVWJcWd~w__',
+    title:'Опытные и вежливые сборщики',
+    description: 'Наши сборщики вежливы и аккуратны. Соберут, установят и вынесут строительный мусор. Имеют стаж работы с кухнями  не менее 6 лет.',
+
+},
+{
+    id: 26,
+    photo: 'https://s3-alpha-sig.figma.com/img/6243/38de/2ffa62da860a765f64a385fe5387f084?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eGct57Dh2JUwajkTUEV3veFfUx~na9x4fl1P6KzAi8dnYRgH2DZQ7DbCrL6EfTkpsCQFqyX9lgy9Y91hHM48v9A-vOKCuiSxIAQXFx3cWLI7u~KJwUIYrYKsWBNdog0~mqE3NNOluU8KvuwnsuZauJVq5HV60GvY-CQsOMRnPz-nyo1aGhDQ5x3KVy~G9irOGxDJiTCCI0O2Fq6Juqj6suKMcpXDUbTrget9gOjKrR93QNgXgctxfES7AXTr87GHPXn6GDJRczkfKOGDnH1VJz8m2bNx2tdGBA85B596cFgeqmShuX01RTc3qq~8AkXwi-9oyaSPkebpGUPUj1o4hw__',
+    title:'Бесплатная доставка и сборка кухни',
+    description: 'Мы бесплатно доставим, соберем и установим Вашу кухню в любой точке Краснодара.',
+
+},
+
         ]
 
+
     }
-]
+
 
 export default backend

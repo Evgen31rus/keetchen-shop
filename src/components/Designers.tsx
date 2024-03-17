@@ -1,9 +1,43 @@
+import { useLayoutEffect, useState } from "react";
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import gsap  from 'gsap'
 import MainButton from "./MainButton";
 
 
 export default function Designers(){
+const [TriggerAnimation, setTriggerAnimation] = useState(false)
+    gsap.registerPlugin(ScrollTrigger)
+    useLayoutEffect(()=>{
+
+        gsap.to('.leftElementDisainers', 
+        {  
+            opacity:1,
+           left: 0,
+           duration:2,
+            scrollTrigger:{
+                trigger:'.leftElementDisainers',
+                toggleActions: 'restart none reserve pouse'
+            },
+     
+         }
+        )
+    
+            gsap.to('.rightElementDisainers', 
+            {  
+                opacity:1,
+                right: 0,
+                duration:2,
+                scrollTrigger:{
+                    trigger:'.rightElementDisainers',
+                    toggleActions: 'restart none reserve pouse'
+                },
+         
+             }
+            )
+
+    }, [TriggerAnimation])
     return(
-        <div className={`flex flex-col w-[80%] items-center m-auto `}>
+        <div className={`flex flex-col w-[80%] m-auto `} onLoad={()=>setTriggerAnimation(true)}>
 
 <div className={`flex flex-col m-5 w-[100%] `}>
     <h1 className={`w-[80%]  text-[2.5rem] font-extrabold flex flex-col text-start
@@ -28,19 +62,33 @@ sm:h-[500px] sm:w-[100%] sm:mb-10
 
 <div className={`w-[100%] h-[100%] `}>
 
-<div className={`top-menu-shadow w-[80%] h-[100%] bg-cover rounded-md bg-center
+<div className={`leftElementDisainers left-[-400px] opacity-0 relative top-menu-shadow w-[80%] h-[100%] bg-cover rounded-md bg-center
 sm:w-[100%]
 `}
 style={{
     backgroundImage: `url(${'https://s3-alpha-sig.figma.com/img/b5cd/0a9d/5cd6288a5f3417b9e662d2b2807c617b?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hhfRkQ9CWtZGn1UKg8zazLAN11n8-OUO5lP9ZnfUP-Tg6RTXr0-JpITVq~VfwhykeZOVKZpBYFvtslS2FglLPP5KnB0rMn7P~lvABpYB6Jz0Re5sdZsbaqdKjpg2S3iR8yWCFcopyzUTkt0KgKQBjafctgb71kZh7vR5ojcDFu2HyahdTJaBsZBZxZa70nUfFAeJIB9p1NH4Ds3dCbQo8eEMjeR2ZJ2xnUimSYNPTGe4TcCmSK3to~JggNVJU2zzvFx~oRe~aU-GpZaJWDR8VZSREqIJIF1C3eet~Edm1cMAqQ1OJT-V6LOT5Rf2sSR8uQegWBK8K-cOazweYk8xww__'})`
-}}></div>
+}}>
+<div className={`top-menu-shadow absolute flex w-[40px] h-[40px] rounded-full bg-white z-20 items-center transition ease-in-out delay-150 duration-300 top-[50%] right-[-5%] cursor-pointer hover:scale-105`}>
+<svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg" className={`flex m-auto`}>
+<path d="M2.76762 0.347056C2.51938 0.118642 2.19104 -0.00570926 1.85178 0.000201458C1.51252 0.00611218 1.18882 0.141824 0.94889 0.378743C0.708958 0.615662 0.571521 0.935291 0.565535 1.27029C0.559549 1.6053 0.685482 1.92951 0.9168 2.17464L11.3408 12.4677L0.9168 22.7608C0.788139 22.8792 0.684942 23.022 0.613367 23.1806C0.541793 23.3392 0.503306 23.5105 0.500204 23.6841C0.497101 23.8577 0.529447 24.0302 0.59531 24.1912C0.661173 24.3522 0.759206 24.4985 0.883558 24.6213C1.00791 24.7441 1.15603 24.8409 1.3191 24.9059C1.48216 24.9709 1.65681 25.0029 1.83265 24.9998C2.00848 24.9967 2.18189 24.9587 2.34253 24.8881C2.50316 24.8174 2.64774 24.7155 2.76762 24.5884L14.117 13.3815C14.3623 13.1391 14.5 12.8104 14.5 12.4677C14.5 12.1251 14.3623 11.7964 14.117 11.554L2.76762 0.347056Z" fill="#E3010F"/>
+</svg>
+</div>
+
+<div className={`top-menu-shadow absolute flex w-[40px] h-[40px] rounded-full bg-white z-20 items-center transition ease-in-out delay-150 duration-300 top-[50%] left-[-5%] cursor-pointer hover:scale-105`}>
+<svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg" className={`flex m-auto`}>
+<path d="M12.2324 0.347056C12.4806 0.118642 12.809 -0.00570926 13.1482 0.000201458C13.4875 0.00611218 13.8112 0.141824 14.0511 0.378743C14.291 0.615662 14.4285 0.935291 14.4345 1.27029C14.4405 1.6053 14.3145 1.92951 14.0832 2.17464L3.65922 12.4677L14.0832 22.7608C14.2119 22.8792 14.3151 23.022 14.3866 23.1806C14.4582 23.3392 14.4967 23.5105 14.4998 23.6841C14.5029 23.8577 14.4706 24.0302 14.4047 24.1912C14.3388 24.3522 14.2408 24.4985 14.1164 24.6213C13.9921 24.7441 13.844 24.8409 13.6809 24.9059C13.5178 24.9709 13.3432 25.0029 13.1674 24.9998C12.9915 24.9967 12.8181 24.9587 12.6575 24.8881C12.4968 24.8174 12.3523 24.7155 12.2324 24.5884L0.882978 13.3815C0.637744 13.1391 0.5 12.8104 0.5 12.4677C0.5 12.1251 0.637744 11.7964 0.882978 11.554L12.2324 0.347056Z" fill="#E3010F"/>
+</svg>
+
+
+</div>
+</div>
 <p className={`text-[1.3rem] p-5 top-menu-shadow flex w-[80%] h-[80px] bg-white rounded mt-10 items-center sm:w-[100%] sm:text-[1.7rem]`}><span className={`text-[#E3010F] mr-1`}>Юлия, </span> Дизайнер кухонь, работает с  <span className={`text-[#E3010F] ml-1 mr-1`}> 2013 </span>  года.</p>
 </div>
 
 </div>
 
  
-<div className={`w-[40%] flex flex-col 
+<div className={`rightElementDisainers relative right-[-400px] opacity-0 w-[40%] flex flex-col 
 sm:w-[100%]
 `}>
 

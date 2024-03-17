@@ -1,3 +1,6 @@
+import { useLayoutEffect } from "react"
+import gsap from "gsap" 
+
 export default function InfoWorks(){
     return(
        
@@ -5,8 +8,8 @@ export default function InfoWorks(){
             
             sm:m-0`}>
 
-<div className={`flex w-[100%] items-center sm:flex-wrap sm:suctify-between sm:text-[1.3rem]`}>
-    <div className={`top-menu-shadow w-1/6 h-[90%] bg-white m-5 items-center justify-center flex flex-col cursor-pointer p-5 rounded-lg
+<div className={`  flex w-[100%] items-center sm:flex-wrap sm:suctify-between sm:text-[1.3rem] ml-5`}>
+    <div className={` leftElement left-[-400%] opacity-100 top-menu-shadow w-1/6 h-[90%] bg-white m-5 items-center justify-center flex flex-col cursor-pointer p-5 rounded-lg
    sm:w-[40%] sm:mb-5 sm:h-[150px] 
     `}>
         
@@ -20,7 +23,7 @@ export default function InfoWorks(){
         <span>Рассрочка 0% <span className={`block`}>до 12 месяцев</span></span>
 
     </div> 
-    <div className={`top-menu-shadow w-1/6 h-[90%] bg-white m-5 items-center justify-center flex flex-col cursor-pointer p-5 rounded-lg
+    <div className={`leftElement opacity-100 top-menu-shadow w-1/6 h-[90%] bg-white m-5 items-center justify-center flex flex-col cursor-pointer p-5 rounded-lg
     sm:w-[40%] sm:mb-5 sm:h-[150px]
     `}>
         

@@ -1,12 +1,14 @@
 import './App.css';
 import backend from './backend';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
 import IProductsObgect from './module';
 
 function App() {
   
-  const products:IProductsObgect[]= backend[0].products
+  
+  const products:IProductsObgect[]= backend.products
 
   return (
    
@@ -15,6 +17,8 @@ function App() {
     
 
       <Main props={products}/>
+
+      <Footer/>
 
     </div>
    

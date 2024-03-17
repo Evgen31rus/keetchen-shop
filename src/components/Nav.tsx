@@ -5,7 +5,7 @@ import MainButton from "./MainButton"
 
 export default function Nav(){
 
-    const [isClick, setIsClick]=useState<string|undefined>('ЦЕНЫ')
+    const [isClick, setIsClick]=useState<string|undefined>(backend.menu[0])
     const UlRef = useRef<HTMLUListElement|null>(null)
 
     const HandlerClickMenu = (e:MouseEvent<HTMLLIElement>) => {
@@ -16,7 +16,7 @@ setIsClick(e.currentTarget.textContent? e.currentTarget.textContent : undefined 
 
 
     return(
-        <div className={`flex-col`}>
+        <div className={` flex-col  `}>
         <div className={`flex w-[100%]  justify-center sm:hidden`}>
             <div className={`flex flex-col p-5  w-1/5 items-center `}>
                 
@@ -79,14 +79,14 @@ setIsClick(e.currentTarget.textContent? e.currentTarget.textContent : undefined 
             ref={UlRef}
             >
 {
-    // backend[0].menu.map((el, index)=>
-    // <li className={`cursor-pointer border-[#E3010F] transition-all
-    // ${isClick==UlRef.current?.children[index].textContent? 'border-b-[2px]': ''}
-    // `} 
-    // key={index} 
-    // onClick={HandlerClickMenu}
-    // >{el}</li>
-    // )
+    backend.menu.map((el, index)=>
+    <li className={`cursor-pointer border-[#E3010F] transition-all
+    ${isClick==UlRef.current?.children[index].textContent? 'border-b-[2px]': ''}
+    `} 
+    key={index} 
+    onClick={HandlerClickMenu}
+    >{el}</li>
+    )
 }
 
 

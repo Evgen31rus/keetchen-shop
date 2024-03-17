@@ -8,10 +8,11 @@ width?:number
 heigt?:number,
 heightMobile?:number,
 heightTablet?:number,
-margin?:number
+margin?:number,
+widthMobile?:number
 }
 
-export default function MainButton({textActive, textNotActive , colorText, bgColor,isBorder, width, heigt, margin, heightMobile, heightTablet }:propsTypes){
+export default function MainButton({textActive, textNotActive , colorText, bgColor,isBorder, width, heigt, margin, heightMobile, heightTablet, widthMobile }:propsTypes){
     return(
         <>
         <button className={`
@@ -19,7 +20,8 @@ export default function MainButton({textActive, textNotActive , colorText, bgCol
         icon relative m-${margin} bg-[${bgColor}] w-[${width}%] h-[${heigt}px] text-${colorText} font-bold rounded text-[1.0rem]  opacity-100 z-10 transition-all
                 hover:scale-105
                 md:h-[${heightTablet}px]
-                ms:h-[${heightMobile}px]
+                sm:h-[${heightMobile}px] sm:w-[${widthMobile}%]
+
                 `}>{textNotActive}</button>
         </>
     )
