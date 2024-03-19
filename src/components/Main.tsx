@@ -9,12 +9,17 @@ import KitchenSales from "./kitchenSales"
 import ProductCard from "./productCard"
 import Reviews from "./Reviews"
 import BannerZone from "./BannerZone"
+import solutounsIMG from '../img/main/Solutions.png'
+import FiveStepsIMG from '../img/main/fiveSteps.png'
+import FiveSteps from "./FiveSteps"
+import Ibackend from "../Ibackend"
 
 type propsTypes = {
-    props: IProductsObgect[]
+    props: IProductsObgect[],
+    backendProps: Ibackend
 }
 
-export default function Main(props: propsTypes){
+export default function Main({props, backendProps}: propsTypes){
     return(
         <div className={`flex flex-col items-center justify-center w-[100%] `}>
 <div className={`flex flex-col flex max-w-[1000px] w-[65%] justify-center 
@@ -42,8 +47,8 @@ sm:static sm:overflow-visible sm:w-[100%] `}>
     sm:flex-col sm:w-[100%] sm:items-center
     `}>
 {
-props.props.map(el => {
-    return <ProductCard product={el}/>
+props.map((el, index) => {
+    return <ProductCard product={el} id={index}/>
 })
 }
 
@@ -77,14 +82,19 @@ className={`top-menu-shadow w-[80%] h-[50px] p-5 border-[1px] rounded `}/>
     </div>
 
 </div>
-<div className={`w-[100%]  max-w-[1000px] `}>
+<div className={`w-[100%]  max-w-[1000px] bg-cover bg-center`} style={{
+    backgroundImage: `url(${solutounsIMG})`
+}}>
 <AdditionalSolution/>
 </div>
 <div className={`w-[100%]  max-w-[1000px] `}>
 <KitchenAvertising/>
 </div>
-<div className={`w-[100%]  max-w-[1000px] `}>
-<KitchenSales/>
+<div className={`w-[100%]  max-w-[1000px] bg-cover bg-center`}
+ style={{
+    backgroundImage: `url('${FiveStepsIMG}')`
+ }}>
+<FiveSteps props={backendProps}/>
 </div>
 <div className={`w-[100%]  max-w-[1000px] `}>
 <Reviews/>
@@ -95,15 +105,8 @@ className={`top-menu-shadow w-[80%] h-[50px] p-5 border-[1px] rounded `}/>
             <BannerZone/>
  </div>
 
- <div className={`w-[100%]  max-w-[1000px] `}>
-<Reviews/>
-</div>
-<div className={`w-[100%]  max-w-[1000px] `}>
-<Reviews/>
-</div>
-<div className={`w-[100%]  max-w-[1000px] `}>
-<Reviews/>
-</div>
+
+
 
 </div>
 

@@ -60,9 +60,9 @@ sm:flex-col-reverse
 sm:h-[500px] sm:w-[100%] sm:mb-10
 `}>
 
-<div className={`w-[100%] h-[100%] `}>
+<div className={`w-[100%] h-[100%] leftElementDisainers left-[-400px] opacity-0 relative`}>
 
-<div className={`leftElementDisainers left-[-400px] opacity-0 relative top-menu-shadow w-[80%] h-[100%] bg-cover rounded-md bg-center
+<div className={` top-menu-shadow w-[80%] h-[100%] bg-cover rounded-md bg-center relative
 sm:w-[100%]
 `}
 style={{

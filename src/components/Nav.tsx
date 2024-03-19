@@ -5,7 +5,7 @@ import MainButton from "./MainButton"
 
 export default function Nav(){
 
-    const [isClick, setIsClick]=useState<string|undefined>(backend.menu[0])
+    const [isClick, setIsClick]=useState<string|undefined>()
     const UlRef = useRef<HTMLUListElement|null>(null)
 
     const HandlerClickMenu = (e:MouseEvent<HTMLLIElement>) => {

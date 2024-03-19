@@ -80,25 +80,76 @@ box-shadow: 3px 14px 44px 63px rgba(244, 246, 247, 0.64);
 border-radius: 5%;
 }
 
-.ElementCard:nth-child(1),
-.ElementCard:nth-child(2),
-.ElementCard:nth-child(4),
-.ElementCard:nth-child(5),
-.ElementCard:nth-child(7),
-.ElementCard:nth-child(8){
-  position: relative;
-  left: -400px;
-  opacity: 0;
+.ElementCard0,
+.ElementCard2,
+.ElementCard4,
+.ElementCard6,
+.ElementCard8{
+position: relative;
+left:-400px;
+opacity: 0;
+}
+.ElementCard1,
+.ElementCard3,
+.ElementCard5,
+.ElementCard7,
+.ElementCard9{
+position: relative;
+right:-400px;
+opacity: 0;
 }
 
-.ElementCard:nth-child(3),
-.ElementCard:nth-child(6),
-.ElementCard:nth-child(9)
-{
-  position: relative;
-  right: -400px;
-  opacity: 0;
+.FiveElementCard0,
+.FiveElementCard2,
+.FiveElementCard4,
+.FiveElementCard6,
+.FiveElementCard8{
+position: relative;
+left:-400px;
+opacity: 0;
 }
+.FiveElementCard1,
+.FiveElementCard3,
+.FiveElementCard5,
+.FiveElementCard7,
+.FiveElementCard9{
+position: relative;
+right:-400px;
+opacity: 0;
+}
+
+.ArgumentsElementCard0,
+.ArgumentsElementCard2,
+.ArgumentsElementCard4{
+position: relative;
+left:-400px;
+opacity: 0;
+}
+.ArgumentsElementCard1,
+.ArgumentsElementCard3,
+.ArgumentsElementCard5{
+position: relative;
+right:-400px;
+opacity: 0;
+}
+
+/*  */
+
+.ArgumentsElementCard0,
+.ArgumentsElementCard2,
+.ArgumentsElementCard4{
+position: relative;
+left:-400px;
+opacity: 0;
+}
+.ArgumentsElementCard1,
+.ArgumentsElementCard3,
+.ArgumentsElementCard5{
+position: relative;
+right:-400px;
+opacity: 0;
+}
+
 
 
 

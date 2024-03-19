@@ -5,10 +5,11 @@ import IProductsObgect from "../module"
 import MainButton from "./MainButton"
 
 type propsTypes = {
-product: IProductsObgect
+product: IProductsObgect,
+id:number
 }
 
-export default function ProductCard({product}:propsTypes){
+export default function ProductCard({product, id}:propsTypes){
 
 
     const [TriggerAnimation, setTriggerAnimation] = useState(false)
@@ -16,26 +17,26 @@ export default function ProductCard({product}:propsTypes){
     useLayoutEffect(()=>{
 
 
-        gsap.to('.ElementCard', 
+        gsap.to(`.ElementCard${id}`, 
         {  
            opacity:1,
            right: 0,
            duration:2,
             scrollTrigger:{
-                trigger:'.ElementCard',
+                trigger:`.ElementCard${id}`,
                 toggleActions: 'restart none reserve pouse'
             },
      
          }
         )
 
-        gsap.to('.ElementCard', 
+        gsap.to(`.ElementCard${id}`, 
         {  
            opacity:1,
            left: 0,
            duration:2,
             scrollTrigger:{
-                trigger:'.ElementCard',
+                trigger:`.ElementCard${id}`,
                 toggleActions: 'restart none reserve pouse'
             },
      
@@ -47,7 +48,9 @@ export default function ProductCard({product}:propsTypes){
 
 
     return(
-        <div className={`ElementCard top-menu-shadow w-[25%] h-[500px] bg-white m-5 rounded 
+        <div className={` 
+        ElementCard${id}
+        top-menu-shadow w-[25%] h-[500px] bg-white m-5 rounded 
         md:w-[30%] md:m-0 md:ml-5
         sm:w-[80%] sm:h-[490px] sm:rounded-3xl sm:mb-10
         `}>

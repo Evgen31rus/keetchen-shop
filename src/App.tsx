@@ -1,14 +1,14 @@
 import './App.css';
-import backend from './backend';
+import Ibackend from './backend';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
 import IProductsObgect from './module';
+import backend from './backend'
 
 function App() {
   
   
-  const products:IProductsObgect[]= backend.products
 
   return (
    
@@ -16,7 +16,7 @@ function App() {
       <Header/>
     
 
-      <Main props={products}/>
+      <Main props={backend.products} backendProps = {backend}/>
 
       <Footer/>
 

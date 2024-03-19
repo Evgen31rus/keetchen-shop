@@ -13,13 +13,15 @@ sm:hidden
 <div className={` bg-[#E3010F] w-[5%] h-[100%] items-center` }></div>
 </div>
 
-<div className={`w-[100%] h-[500px]`}>
+<div className={`w-[100%] h-[600px]
+sm:h-[1500px]
+`}>
 
 <div className={`flex flex-wrap w-[100%] mt-10 justify-between`}>
 
 {
-backend.kitchenArguments.map(el=>
-    <KitchenAvertisingCard backend={el}/>
+backend.kitchenArguments.map((el, index)=>
+    <KitchenAvertisingCard backend={el} index={index}/>
 )
 }
 

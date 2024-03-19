@@ -132,9 +132,36 @@ let backend =
 
 },
 
+        ],
+
+        fiveSteps: [
+            {
+                photo: 'https://s3-alpha-sig.figma.com/img/61ad/43f6/94ee7564693d3c314abc367a263ace70?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g6eJs41hKkWk~MfENQsANPigIbwEJPqWAZMW-YiV9PzPnAihqjz1zsvChpjDol~ZOUa4aZ2xlmiJSnixtRyEXu6OuPm6HEKx9Uc~8gFSfXGQob~3iFgVSzyCg7oXJdcl14F-ujk7ETvWRK6CCDpERLyf3ipXTtlKwpc7LsZSxQbkNryOPtat-F44Cpn~5zn81XWsFjk-O4PpRXJvsm1a2-yU9aa3LOqcdSixAn-DOyKXSGr51cGFimZ8favc5njtP9pi95xuiOwQ~8i-O~Hal2SQc-~Ywha3qGl6j8l99SmHgrL-d7~BsPcH0iUHQwpmJYI5PoD4kCuR8JY4PJm3AA__',
+                title: 'Заявка',
+                info: 'Вы оставляете заявку или звоните нам  +7 (989) 277-94-30  Наш специалист подробно расскажет Вам об особенностях наших кухонь, вариантах оплаты и ее установки.',
+            },
+            {
+                photo: 'https://s3-alpha-sig.figma.com/img/38b1/b4f8/415a17d2c391ce61511e06d2fa70a4aa?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ll0JjeEPFPaDRsICtKKd0jQnk4zxBjTxBZQADV13ooIjogTW97czEZyG6LgUbLsWgxXtTsm1lHy4HqnMiZnWzpljnHpbDOId8eeBKBpA1AqTrGZnoYESJ7zFYGkqYihOQncQ3YfOKYcXqB24lPU1OhATVfWDZ9N9VKeVKeARGF4mh2AG1EJDYMY~OQMYBLbWOFhyJmpXrDNwWZDmESD~zVAuYo7L9Cc1fZWes-p9s5SKBnLor-LlWhCmAl-jMqeKxQMTGHoUKN9hNr7YC--DtZj4xONyyHrDZIQegoFgjtPco-nsse5IVATxLR9QBARv3OuQ692jLwNpsuBzTT4OUA__',
+                title: 'Консультация дизайнера ',
+                info: 'Наши дизайнеры с 9:00 до 21: 00 помогут Вам подобрать идеальную кухню, проведут замер, сделают проект и рассчитают стоимость.									',
+            },
+            {
+                photo: 'https://s3-alpha-sig.figma.com/img/e82f/662f/e684dd347dd4aaaad8caae84c16bfd11?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EvqX3ZEsIkUhmD~0NzQJXon7VJgirqtr1qebyUTc1PiDrDqW1rKy9lOPjYmiXc0hnDELNLu-jwxPRV1H~OZ9MD2KrsMcTvNa5XAwjpvrbMcIEQ6~Ms9ze7bp1dhg7n0vH1tdqfzroscNOebaMHS5Vb3L2QbfYcRRhKd5nLNOss3S6DhFFWJJgOVxA-nQV8~yFDiTfWdlQLOvwt8N3jTWO8xW1J5cGfYuFSWiX52S3GdctAoa-UQcnpQHSNlCmRIPXzEehIwy-LD9GaZ7glIxuTNNl05-fOOAX6Ahh7LiOV4F2f2ye~FqyDh-o4A8KKEcx66bFf6OvrX0nrI9LvNqVw__',
+                title: 'Заключение договора',
+                info: 'Подписываем договор, выдаем чек, оформляем рассрочку, согласовываем удобное для Вас время доставки и сборки.',
+            },
+            {
+                photo: 'https://s3-alpha-sig.figma.com/img/ce61/80be/37f47b4eb642850a46fb8b59b82a4829?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dxdv2sonBLzgRwbjOb6MtOPWAffpri~qPjlkenwcgm8jilisZHj6uXnIKlJ3nVwnjUyOtSc-srCDUMZr8bcyf1~-3Lz36O~5Xfk-gbkEg-DH8HDlFnf2WxRhI~c0oA3ANsnBUetnok9Ex8qL4AnWwAn7bfq12LqEidoVyUndTzdmwUC379XzMnFE19~BXnms8yTHleIqVXcKxZzW4mlBxY8Cu-thNHorLP8pD0xewnNe2bPLDbwog1o6YtNNSAVeDxtfOYEYH7souCRms~xXmaLpYsDnXW9k5xH50nKF~s7~tBEWK3PV9BwZD1V5r4uo0jeNOhYPqqonUd8AGSf6ag__',
+                title: 'Доставка и сборка кухни',
+                info: 'Привезем Вашу кухню, соберем и установим. Время работ зависит от выбранного Вами материала и перечня дополнительных работ. По окончанию сборки делаем уборку, выносим мусор.',
+            },
+            {
+                photo: 'https://s3-alpha-sig.figma.com/img/e5af/c88d/a0a011d2cb1de85f05be6f861a32a2cd?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IMzeLQbFB7OgPkLZYbq4f1u3FY0a6lv3aDEYYKjnkxPctCBJTt6njUsxoLiwzRE8~hqiE86GvZRqXvjC7XZGw3IV4fPVFT3we3ciiOsl2JV8Lo1nwbIFQf1bFRKZXwHBGpVEF8J5G0CkEcKeXAKCAjCE-RPUUwWG~YQm~2Zq1ExDQ3xsgQd1Ib4T76u3H0ObO6zGH0KBlsv~2RdP6eBYmzydF6L9-wjaN9nEvaOOgtwWoL~XNzTPTddhBiIJ807Wg3pYPEmlODGPtG4dh8Uqy0Xbn3wEjeaDSU6LfS-QFITLX1R~abU44ptGN91oODBVUWJxxa2mec7LPj2-NJTmQg__',
+                title: 'Поздравляем! Ваша кухня готова!',
+                info: 'Теперь вы можете наслаждаться временем проведенным с семьей на Вашей новой кухне.',
+            },
+
         ]
-
-
     }
 
 

@@ -2,8 +2,46 @@ import MainButton from "./MainButton";
 import ImgFerstCard from '../img/main/AditionalSolutions/img-3.png'
 import ImgSecondCard from '../img/main/AditionalSolutions/img-1.png'
 import ImgThirdCard from '../img/main/AditionalSolutions/img-2.png'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import { useLayoutEffect, useState } from "react";
 
 export default function AdditionalSolution() {
+  // const [TriggerAnimation, setTriggerAnimation] = useState(false)
+  //   gsap.registerPlugin(ScrollTrigger)
+  //   useLayoutEffect(()=>{
+
+
+  //       gsap.to(`.FiveElementCard${index}`, 
+  //       {  
+  //          opacity:1,
+  //          right: 0,
+  //          duration:2,
+  //           scrollTrigger:{
+  //               trigger:`.FiveElementCard${index}`,
+  //               toggleActions: 'restart none reserve pouse'
+  //           },
+     
+  //        }
+  //       )
+
+  //       gsap.to(`.FiveElementCard${index}`, 
+  //       {  
+  //          opacity:1,
+  //          left: 0,
+  //          duration:2,
+  //           scrollTrigger:{
+  //               trigger:`.FiveElementCard${index}`,
+  //               toggleActions: 'restart none reserve pouse'
+  //           },
+     
+  //        }
+  //       )
+       
+    
+  //   }, [TriggerAnimation])
+
+
   return (
     <div className={`flex flex-col w-[80%] items-start m-auto mt-`}>
         
