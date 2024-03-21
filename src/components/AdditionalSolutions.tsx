@@ -5,8 +5,13 @@ import ImgThirdCard from '../img/main/AditionalSolutions/img-2.png'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useState } from "react";
+import IAdditionalSolution from "../IAdditionalSolutions";
+import AditionalSolutionsCard from "./AdditionalSolutionsCard";
+type propsTypes ={
+  props: IAdditionalSolution[]
+}
 
-export default function AdditionalSolution() {
+export default function AdditionalSolution({props}:propsTypes) {
   // const [TriggerAnimation, setTriggerAnimation] = useState(false)
   //   gsap.registerPlugin(ScrollTrigger)
   //   useLayoutEffect(()=>{
@@ -56,34 +61,11 @@ sm:hidden
       <div className={`flex w-[100%] justify-between mb-10 mt-10 font-semibold  
       sm:flex-col
       `}>
-
-        <div className={`top-menu-shadow w-[30%] h-[250px] fex-col items-center rounded-lg 
-        sm:w-[100%] sm:mb-10`}>
-          <div className={`w-[100%] h-[60%] bg-center bg-cover rounded-t-lg`} style={{
-            backgroundImage: `url(${ImgFerstCard})`
-          }}></div>
-          <h3 className={`text-[1.3rem] pl-5 pt-5`}>Подключение техники для кухни</h3>
-          <MainButton textNotActive={`Получить консультацию`} width={80} heigt={30} bgColor={`#E3010F`} colorText={`white`} margin={5} />
-        </div>
-
-        <div className={`top-menu-shadow w-[30%] h-[250px] fex-col items-center rounded-lg
-         sm:w-[100%] sm:mb-10
-        `}>
-        <div className={`w-[100%] h-[60%] bg-center bg-cover rounded-t-lg `} style={{
-            backgroundImage: `url(${ImgSecondCard})`
-          }}></div>
-          <h3 className={`text-[1.3rem] pl-5 pt-5`}>Подключение освещения</h3>
-          <MainButton textNotActive={`Получить консультацию`} width={80} heigt={30} bgColor={`#E3010F`} colorText={`white`} margin={5} />
-        </div>
-        <div className={`top-menu-shadow w-[30%] h-[250px] fex-col items-center rounded-lg
-         sm:w-[100%] sm:mb-10
-        `}>
-        <div className={`w-[100%] h-[60%] bg-center bg-cover rounded-t-lg`} style={{
-            backgroundImage: `url(${ImgThirdCard})`
-          }}></div>
-          <h3 className={`text-[1.3rem] pl-5 pt-5`}>Подключение сантехники</h3>
-          <MainButton textNotActive={`Получить консультацию`} width={80} heigt={30} bgColor={`#E3010F`} colorText={`white`} margin={5} />
-        </div>
+        {
+          props.map((el, index)=>
+          <AditionalSolutionsCard props={el} index={index}/>
+          )
+        }
 
       </div>
 

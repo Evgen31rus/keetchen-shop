@@ -1,7 +1,27 @@
+import AdditionalSolution from "./components/AdditionalSolutions"
+
 let backend = 
 
     {
         menu: ['Цены', 'Акция' , 'Материалы', 'Как заказать', 'Наши работы', 'Отзывы' , 'Контакты'], 
+        HelpSearch: [
+            {
+                photo: 'https://s3-alpha-sig.figma.com/img/40b9/3f25/ad29d92a900e308f6d22c945a250357b?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j2uYk5EBsBHk8DVw04fuWTZptGNzK~qswM4w8y951vDmpL2~iJ-6z5f4GrU~aAsLeMQzZnVOIABsLMnaJW5Auwk8gTP0qFKe3ZXOBI9hj6VBHr14pcy0KL0sUlVLJW2I42XW4QSV-SlNAXjQtk8wEnlXZmzRGKGORuiVaBmh4JNMERpA2zfWxRtKPRD3eN1dKPZsCOUh9AFa3bfWmh02pb9EJg3SQRgAUXRTODwlaRjmF6keaijO1LUTVSmLxP3rGOhREsWI-f~fH08iLdLGEWg315lF2Zk6JlxfVG1GCa-O4ePcsPbztLL~rOz6TLT3VGVoe3NhN2IHzvPxJ0YdCw__',
+                title: 'Современные кухни',
+                description: 'У нас более 650 моделей современных кухонь.'
+            },
+            {
+                photo: 'https://s3-alpha-sig.figma.com/img/b8b0/d517/1edf4cc43e235fc320ccb9b55f0fcfa8?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AIO3cFSYaLre-LRirxKLlRyrIZTjISNKPYDJnvE9k6WyEOOS6R1nDrB8vWWBV8McWyYCsZ7jg3sPUC0zzarY6MGdEHO9ITU2E0phG7cxA6aedzXzMl4b8EB0a0l7Y1Nm5NjnvFxJgO-6lVrupIeB7DE0JDIzHTg86FgZ6IZ5-UxDcLjOZGjZMvEgm0v~SGuCxxvXeC3wVmyf8avqNu4flwAa1QaBNS4pBHSA6AW~aV8mcfdQVd9kMEb2b0NT1Op4ooC6RKyfY-SQb~JX3H7Xw57YJMnnwOI-7R2iaaYq~krC9bZ5-qpYWj1-opIkZruwIttzqL1YWI~HkYRUNlAvsg__',
+                title: 'Кухни Лофт',
+                description: 'У нас более 470 моделей кухонь в стиле Лофт. '
+            },
+            {
+                photo: 'https://s3-alpha-sig.figma.com/img/d011/63f8/81e58b033d10007a396f141aff3f5594?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=byZuhIQECY6ph78MfPE9lGDi6GjhuHaaLxgwpNgN8p2OSDzYPa3Jumi4Tja-5h7oyfuhpsJ5ehKpiy9jP93KafOFOzQe7oHp0CBwQSm7ko6~0m4w5Y-Wx0~UJA3WCeHu6M6-EAHtGoVtGSrYkI2nu3GBPP96YWm-fQhxDx~S5ORlnReDi~7cHss0KDlANt5tUCgSGDmu0kbEfq2skBi5nvqXZdDIqPnE~STwv7JwPiBqO0~oxYIoJSIfWlF3kGLPTJzu8b~o6GKkX1E3ouSzPBZI6Uz~KM~pHpirILBQLaaOa5YvNGi51EdGvnOWAlcSeqhW91YNOCkIjZ4Idsv8aA__',
+                title: 'Классические кухни',
+                description: 'У нас более 730 моделей классических кухонь.'
+            }
+        ] ,
+
         products: [
 {
     productID: 1,
@@ -87,6 +107,26 @@ let backend =
 
 
         ],
+
+    additionalSolution:[
+{   
+photo:'https://s3-alpha-sig.figma.com/img/15d6/aa9a/43975d9b3aad7f35669e6bd5a01c6d86?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KV~J--nYtP7dYxUdreL1qgdbWFXMFynDV74YeL5Syhk~JLKTcqmyJvjNhUbX1ECjvgVeeDXVTmnovcxBezWY2uZLC9iuYKk-LzkP7fKM~M-3ZZuKOT7sjDF-evQ4NzGv3lpMGAsFa3rJX8odJOq2NozUNnLelGaKC52ZAR6w5MaV2pDYtGreN3NyTYUja6JAhiSno~K8lIeIOCWvIde7bdGiJq4y6e-xyf3zx5whPrPkqeoco8zhK-Kg-9vyNuwMq2VFiJc4-s7VfrqyX4zndGEvov1CPQaEnzCcJXcv81OIa7jTL6puX8rBn6FAux8i9wxRNtcPEt83oNp95XD2RQ__',
+title:'Подключение техники для кухни'
+
+},
+{
+    photo:'https://s3-alpha-sig.figma.com/img/2ae4/3b30/8845656c1c452428dfeb684787d4a6f3?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UeDFphiQede8C60IZ0SX08UtM9MfCcPkf~aIJI4-oKzyGvuxEDRTCUnLA~pVPZ9VGKQ97RGBl5w4X6acXgzhzJcns~vWYSGsl9Oe2oEAlBN3iZCJGGASSMRT2fIPa8Y3e08-H1fiBNrnJhO1m87uzXjJL0m0ElXRsUtYa7Wqjz98-Z8QAkFFq4FccP1qKeUr~x4Hp2KoOkRgRPMlOYVBs4-9lHO8oEo5Rflkp8oJCH~q4kyG7Fz0ZMf1qKMqKTIWSGhn~Qe4rBNWB7~26XVk-T2FB33jlAHm3W51rspOC~eCAAehGi4p~TuWpTcqvPubPinbQ5frWDplkOnlEiqZpA__',
+    title:'Подключение освещения'
+    
+},
+
+{
+        photo:'https://s3-alpha-sig.figma.com/img/3003/e781/99e86c775f56a8bfb9978c83db4b27be?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c6Iz69nw01bQGBAHGcC9m6UezHi1aunql5E~HKwP6~CWf9x~~NccG-jntL23B610taK9VBkATE7inACd92u~mNRPAQAcQ~EnwNEQf4Nt4buXu-8o6wXXFjaYHpkbDKnM0JoW4k2wErGJ1tk2T1qEzm~t8Xa9rsKEMAubnQqOXgXvC9rASrO6xgJnFBJkPaxN6mu2GgvB2YiuxW4e28qSeBOaKV1JjX805P2LayZOkqqQDDVoGlzqDSsbemWw2rinENFWhZw1oqo6x8sTT3AtJir~5lJ5SBaf8do~hpBgze66t1flPxl-xg6ZuJNeevCDV98fhan84WPZV7v5eHS6Fg__',
+        title:'Подключение сантехники'
+        
+}
+
+    ],
 
         kitchenArguments: [
 {

@@ -150,8 +150,37 @@ right:-400px;
 opacity: 0;
 }
 
+.HelpSearchElementCard0,
+.HelpSearchElementCard2,
+.HelpSearchElementCard4{
+position: relative;
+left:-400px;
+opacity: 0;
+}
+.HelpSearchElementCard1,
+.HelpSearchElementCard3,
+.HelpSearchElementCard5{
+position: relative;
+right:-400px;
+opacity: 0;
+}
 
 
+
+.AdditionalSolutionsElementCard0,
+.AdditionalSolutionsElementCard2,
+.AdditionalSolutionsElementCard4{
+position: relative;
+left:-400px;
+opacity: 0;
+}
+.AdditionalSolutionsElementCard1,
+.AdditionalSolutionsElementCard3,
+.AdditionalSolutionsElementCard5{
+position: relative;
+right:-400px;
+opacity: 0;
+}
 
 @media screen and (max-width:639px) {
   .header-banner{

@@ -37,7 +37,7 @@ const [TriggerAnimation, setTriggerAnimation] = useState(false)
 
     }, [TriggerAnimation])
     return(
-        <div className={`flex flex-col w-[80%] m-auto `} onLoad={()=>setTriggerAnimation(true)}>
+        <div className={`flex flex-col w-[80%] h-[700px] sm:h-[1000px]`} onLoad={()=>setTriggerAnimation(true)}>
 
 <div className={`flex flex-col m-5 w-[100%] `}>
     <h1 className={`w-[80%]  text-[2.5rem] font-extrabold flex flex-col text-start
@@ -82,7 +82,8 @@ style={{
 
 </div>
 </div>
-<p className={`text-[1.3rem] p-5 top-menu-shadow flex w-[80%] h-[80px] bg-white rounded mt-10 items-center sm:w-[100%] sm:text-[1.7rem]`}><span className={`text-[#E3010F] mr-1`}>Юлия, </span> Дизайнер кухонь, работает с  <span className={`text-[#E3010F] ml-1 mr-1`}> 2013 </span>  года.</p>
+<div className={`flex flex-wrap text-[1.3rem] p-5 top-menu-shadow flex w-[80%] h-[80px] bg-white rounded mt-10 items-center sm:w-[100%] sm:text-[1.7rem]`}><span className={`flex text-[#E3010F] mr-3`}>Юлия, </span >  Дизайнер кухонь, работает 
+<span className={`block text-[#E3010F] ml-3 mr-3`}> 2013 </span>  года.</div>
 </div>
 
 </div>

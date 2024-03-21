@@ -15,13 +15,13 @@ import FiveSteps from "./FiveSteps"
 import Ibackend from "../Ibackend"
 
 type propsTypes = {
-    props: IProductsObgect[],
-    backendProps: Ibackend
+    props: Ibackend,
+  
 }
 
-export default function Main({props, backendProps}: propsTypes){
+export default function Main({props}: propsTypes){
     return(
-        <div className={`flex flex-col items-center justify-center w-[100%] `}>
+        <div className={`flex flex-col items-center justify-center w-[100%] overflow-hidden`}>
 <div className={`flex flex-col flex max-w-[1000px] w-[65%] justify-center 
 md:w-[100%] md:justify-around 
 sm:w-[100%] sm:flex-wrap
@@ -30,10 +30,10 @@ sm:w-[100%] sm:flex-wrap
 
 </div>
 
-<div className={`flex flex-col items-center w-[100%] `}>
+<div className={`flex flex-col items-center w-[100%] overflow-hidden `}>
 
 
-<div className={` main-fon w-[100%]  max-w-[1000px] justify-center 
+<div className={` main-fon w-[100%]  max-w-[1000px] justify-center overflow-hidden
 md:overflow-scroll md:w-[100%] md:absolute
 sm:static sm:overflow-visible sm:w-[100%] `}>
 
@@ -42,12 +42,12 @@ sm:static sm:overflow-visible sm:w-[100%] `}>
 
     </div>
 
-    <div className={`flex flex-wrap w-[100%] justify-center 
+    <div className={`flex flex-wrap w-[100%] justify-center overflow-hidden
     md:flex-nowrap md:w-[500%] 
     sm:flex-col sm:w-[100%] sm:items-center
     `}>
 {
-props.map((el, index) => {
+props.products.map((el, index) => {
     return <ProductCard product={el} id={index}/>
 })
 }
@@ -59,14 +59,16 @@ props.map((el, index) => {
 
 
 </div>
-<div className={`w-[100%]  max-w-[1000px] `}>
-<HelpInSearching/>
+<div className={`w-[100%]  max-w-[1000px] overflow-hidden`}>
+<HelpInSearching props={props.HelpSearch}/>
 </div>
-<div className={`w-[100%]  max-w-[1000px] `}>
+<div className={`flex w-[100%]  max-w-[1000px] relative sm:overflow-y-hidden justify-center `}>
 <Designers/>
 </div>
 
-<div className={`flex w-[100%]  max-w-[1000px] mt-[15%] justify-center `}>
+<div className={`flex w-[100%]  max-w-[1000px]  justify-center overflow-hidden
+sm:m-0
+`}>
     <div className={`w-[80%]`}>
     <p className={`hidden text-[1.9rem] w-[70%] sm:flex mt-10`}>Оставьте свой номер телефона и наш дизайнер свяжется с Вами в ближайшее время 								</p>
     <div className={`hidden top-menu-shadow w-[100%] h-[200px] rounded flex flex-col items-center p-5 mt-5 
@@ -82,25 +84,25 @@ className={`top-menu-shadow w-[80%] h-[50px] p-5 border-[1px] rounded `}/>
     </div>
 
 </div>
-<div className={`w-[100%]  max-w-[1000px] bg-cover bg-center`} style={{
+<div className={`w-[100%]  max-w-[1000px] bg-cover bg-center overflow-hidden`} style={{
     backgroundImage: `url(${solutounsIMG})`
 }}>
-<AdditionalSolution/>
+<AdditionalSolution props={props.additionalSolution}/>
 </div>
-<div className={`w-[100%]  max-w-[1000px] `}>
+<div className={`w-[100%]  max-w-[1000px] overflow-hidden`}>
 <KitchenAvertising/>
 </div>
-<div className={`w-[100%]  max-w-[1000px] bg-cover bg-center`}
+<div className={`w-[100%]  max-w-[1000px] bg-cover bg-center overflow-hidden`}
  style={{
     backgroundImage: `url('${FiveStepsIMG}')`
  }}>
-<FiveSteps props={backendProps}/>
+<FiveSteps props={props}/>
 </div>
-<div className={`w-[100%]  max-w-[1000px] `}>
+<div className={`w-[100%]  max-w-[1000px] overflow-hidden`}>
 <Reviews/>
 </div>
 
-<div className={` header-banner relative flex w-[100%] max-w-[1000px] h-[500px] bg-no-repeat bg-cover bg-center 
+<div className={` header-banner relative flex w-[100%] max-w-[1000px] h-[500px] bg-no-repeat bg-cover bg-center overflow-hidden
         sm:w-[100%] ` }>
             <BannerZone/>
  </div>

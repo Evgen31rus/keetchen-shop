@@ -4,12 +4,13 @@ import backend from "../backend"
 import MainButton from "./MainButton"
 
 export default function Nav(){
-
-    const [isClick, setIsClick]=useState<string|undefined>()
     const UlRef = useRef<HTMLUListElement|null>(null)
+    const [isClick, setIsClick]=useState<number>(0)
+    const [widthElement, setWidthElement] = useState<number|undefined>(UlRef.current?.children[0].scrollWidth)
 
     const HandlerClickMenu = (e:MouseEvent<HTMLLIElement>) => {
-setIsClick(e.currentTarget.textContent? e.currentTarget.textContent : undefined )
+setIsClick(e.currentTarget.offsetLeft)
+setWidthElement(e.currentTarget.offsetWidth)
 }
 
     
@@ -75,27 +76,28 @@ setIsClick(e.currentTarget.textContent? e.currentTarget.textContent : undefined 
         
         <div className={`flex flex-col w-[100%] mt-2 mb-2 sm:hidden`}>
 
-            <ul className={`flex w-[100%] justify-around text-[1.2rem] uppercase`}
+            <ul className={`flex  w-[100%] justify-around text-[1.2rem] uppercase`}
             ref={UlRef}
             >
 {
     backend.menu.map((el, index)=>
-    <li className={`cursor-pointer border-[#E3010F] transition-all
-    ${isClick==UlRef.current?.children[index].textContent? 'border-b-[2px]': ''}
-    `} 
+    <li className={`cursor-pointer border-[#E3010F] transition-all`} 
     key={index} 
     onClick={HandlerClickMenu}
     >{el}</li>
     )
 }
-
-
-
-
             </ul>
+            <div className={`mt-3 relativre h-[3px] w-[92%] border-b-[1px] border-[#E3010F] m-auto`}>
 
+          
+            <div className={`absolute  h-[4px] bg-[#E3010F] transition-all`} 
+            style={{
+                width: `${widthElement}px`,
+                left: `${isClick}px`
+            }}></div>
 
-
+</div>
         </div>
         </div>
     )

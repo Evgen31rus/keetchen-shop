@@ -16,7 +16,7 @@ function App() {
       <Header/>
     
 
-      <Main props={backend.products} backendProps = {backend}/>
+      <Main props = {backend}/>
 
       <Footer/>
 
