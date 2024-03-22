@@ -99,7 +99,7 @@ className={`top-menu-shadow w-[80%] h-[50px] p-5 border-[1px] rounded `}/>
 <FiveSteps props={props}/>
 </div>
 <div className={`w-[100%]  max-w-[1000px] overflow-hidden`}>
-<Reviews/>
+<Reviews props={props}/>
 </div>
 
 <div className={` header-banner relative flex w-[100%] max-w-[1000px] h-[500px] bg-no-repeat bg-cover bg-center overflow-hidden

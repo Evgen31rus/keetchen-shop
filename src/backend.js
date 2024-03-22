@@ -201,6 +201,54 @@ title:'Подключение техники для кухни'
                 info: 'Теперь вы можете наслаждаться временем проведенным с семьей на Вашей новой кухне.',
             },
 
+        ],
+
+        reviews: [
+            {
+                data: '22.03.2024',
+                userPhoto: 'https://s3-alpha-sig.figma.com/img/3872/2d8c/cdad7cb400610434286fb9716aaeb601?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ohfs2N6LvUAkHZY2ib1s4hOsZ-C~EF1SjdyT4Lh4NBUed1nq~OweS2U1f-m~GC0c8RpD5dQJTyGIaOYedhp7Qz2-ZqcO5BUElPqrHwGKrfDrD98AV8WdrXRaUe7k-2Ih3NJqkgtTmXfkx6fFNlECko4HGDRJZlz82rythkP6BHBEacqoJxszR-08a-hoahHhhjNIdf8f77-M1wEYi-u7zlZqdkv9mbmBGl-jHzODAl9H0MJx~t3CevYphRzlyA6C4M7zn0dvWlWBJZHywXVbaPnJHOAHhYt8H8zWQ9N7ka6sePdQFnY4DJqCi7vgFW0~Xw1zXugV36muETcDhAhLXg__',
+                userName:'Ирина',
+                userLastName:'Егорова',
+                rating:5,
+                reviews: 'Заказали кухню в свою квартиру.  Дизайн и качество нас полностью устраивает. С доставкой проблем не возникло, всё привезли без задержки и полный комплект, ничто не повредилось, опытные сборщики  быстро и качественно собрали всю кухню. Кроме того компания сделала нам хорошую скидку, отношение к клиентам очень теплое, спасибо вам.',
+                productPhoto:'https://s3-alpha-sig.figma.com/img/fc46/de19/4481de216beb225f8305119b1d77526f?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fc7sziyHDfPCJKLnd2p2u~p-ZA5SfY8Pu8k1IadmwCJwro1jeQzMP~pcTDGf3HMbVTDVTFmThBkZRbkEK5POhPcndd~ijIG69z8e8ZmkEPy6uuR9UAURcAPx2lEdFIoywdLQXx~LyuOudGU7b1rOSmcKqA4fGMO9EW1AMmN6-avnmpv55N16VeFVf3yfHk4lCjVEiJ79sfC~UbfYIIFTJ0lTV8IRGPNmbMZHONW2bVPb8yHc~NuEaAx~3LW6RR-TR4hHF95EP33-8ZpqNka3QIPloh9LBykoNaUDlatnAos6-eMiK02xMesTCeNwYa8XDm10oXi3eEiYTKQ47HdY7Q__',
+            },
+            {
+                data: '21.03.2024',
+                userPhoto: 'https://s3-alpha-sig.figma.com/img/341d/312b/ed219533d7204135eb9b6fed186921dd?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HS1viHgVPw4dKh9czozvi4exXDWhkszAfo65T-CFb65tjf6N9D~KaiTBB7brip4MPEjQVH2yQOwF3fxFU~xphpTuH3mvFU-estkM0WyOEXgPWmjIDfmnSqd0MohFm0EXE2iR8InU81Wc8cZ6G3To4KtQmE6wMRreWqIJUfv2yOAoM2wBf4M3L9WBwI2AuOmi-ed48GdofHBW0x86FvZBLhdK0q5gKFwSj2HF4pAamrGePC~UpCmod6IZSGQS4M6YfgSodzdYBn8msZdZuhnagzxLTHAu1Jfqhz5-TUyBeOKiXxnG2Y48Jnvp3gOmsciwie1uskBW62W3lB2Q6hfu0Q__',
+                userName:'Елена',
+                userLastName:'Федорова',
+                rating:5,
+                reviews: 'Компанию «Немецкий стандарт» нашли с мужем в интернете случайно. После  общения с дизайнером, я решила заказать кухню именно там! Впечатлила работа монтажников Евгения и Александра!  Мало того, что они отлично знают своё дело, но также очень вежливы в общении. При установке кухни  учли все мои пожелания, работу выполнили быстро ,чисто и качественно! Пользуюсь кухней уже год и получаю огромное удовольствие.',
+                productPhoto:'https://s3-alpha-sig.figma.com/img/6416/2182/9d902194fb92c4b1d4203bb2c567808c?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Upj2PgLxRj~JJNoaro5oEPODV1K3nS4lC9drh0oKJRok9Nchf9ssNIdAgWKd4gg5jJNnWqVDiiy-r-LQfNdMZ3fF8pfECcjCwZP2TboPA3iGu-WER4cmEzcDa7I2k8DTV583qPC-6OAiPRvyxQrEwBZSB1ybfZ0297Fc5O0ZgwFdSg47mjR5lylt0OpAs-lJJKkpsibp2YK1maZFzZ31rrZg-yVVde7a1v6dRcauF1a2zSVdpZwNJzSXkOs1epfKWebqHRhe-R0seQXOEZrxB~wBoC6MvWgRouebIw3W90dzQnwny3dIeLq26zMCoRMwpe93OMe8gcizAQJFggW6ww__',
+            },
+            {
+                data: '12.03.2024',
+                userPhoto: 'https://s3-alpha-sig.figma.com/img/c974/e086/2ee619ebea2361b504b5570d54a677b4?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ms8zXaz7wGcG4doUo2xbp0iFIXd0Ubofm3q0R1MVAap9HoGUd7f5yZP-dZFAXOzcaZqJ9w~~PtfvfLPEFO9O5qPGUYXTiFa~-agGWs5Mao6h40pzz138Rw9IFYCt47mXKZG9xHGcb6e7L4Avwhpfr8Au1yQh~wjl~0a6qeALdZNSvnM3avSAxhUmmA9Gg3PASm-IRuMX5OES979AwJxp0I4vq99PGb-DkMCPcOOnaUw2TU822i3uHr~z71BX~R2aZ5i5NsF32txPsMgLTmSv~065HJ~MB0RNVGaJujV-FSjw8n~EAaTAt0euXx-TLhpNAWwMWvJBmWUJwnN1zCFHFg__',
+                userName:'Николай',
+                userLastName:'Гриценко',
+                rating:5,
+                reviews: 'Пересмотрев большую часть компаний по изготовлению кухонь мы с женой  наткнулись на компанию "Немецкий стандарт", г. Краснодар. Пользуемся кухней вот уже на протяжении четырех  месяцев.  На сегодняшний день ни с какими проблемами не сталкивались, наоборот - стало более уютно и приятно проводить время на кухне. Получилось все, как хотели.',
+                productPhoto:'https://s3-alpha-sig.figma.com/img/615e/81c2/ca617f895b80a3a27b46dc4f2e84cf07?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=P85V87swNSl9D0qOEPGnVoA8K6Bbps1ur8~3kCda-~YMqeMl4lwWrVaHGFNPCU3UUGLY4Hv7PXOaaRBkAWYhH3lToUS--igZZZZQUeXHKZp3i1mABAznPK5BCX~BiPWmMrFo~WDuBMaZULi40U4VX1-obUCmwa3biBfBiDSvWuo-5KxgD5fFeRTI2fcM0AawOvpUFQgd2Hy79ItFx6cz5FPyNAZefLTEIhDdhv0ol8HeMFR8P1QywXJnDbU4PvujaSPw~svDaCAmVFWeIrZzo~IRUqwsGlF70k98fearXq~1aqGiG7KL0Q86bku8zruut8FKJ03-j3dn5zYOt-rfqw__',
+            },
+            {
+                data: '22.03.2024',
+                userPhoto: 'https://s3-alpha-sig.figma.com/img/6fec/88b5/01027848ef1c8593b0ae211ac41cca81?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HuYP3oyL7ttR1oKFWDNX473zCuLMCvjm3BQEW5809dCYmgpWCHgVm4FqySRMkSL8sDU1bA0fv2y-ZjllZJu1~asHb7RLNW36gHMJ5BysxtYg6ZvDKEH22vX341lzARytEknedmANo-15UjQ3cOO5xMbhA2OY6~CyZuBRZ1Y4X6t7L-Ejpca1BeqXwFD-Q1YHk5RU-oHhv08l3-0Zp62sUmFN5bqtPEvGLLDoaMq7t8XXz9VeAmMSUQnx0LTjBqGeZqdYI-tUcy-NWpCzd0VkSHgtDci-eq04oBLexRqNO4nJaRkgabk~D3O9CMp7HXOR8yWAOyrmNcynzUNavlA6og__',
+                userName:'Ольга',
+                userLastName:'Юхневич',
+                rating:5,
+                reviews: 'Долго подыскивали где заказать мебель для кухни. Случайно нашли  "Немецкий стандарт" поинтересовались смогут ли изготовить кухню как мы хотим. Сделали у них заказ. Выполнено все в срок ( и даже чуть- чуть раньше), качественно с учетом  всех наших пожеланий по дизайну и размерам. Большое спасибо. Отдельное спасибо дизайнеру Юлии за  советы по подбору материалов и фурнитуры. Все вежливы, учтивы, корректны и доброжелательны.',
+                productPhoto:'https://s3-alpha-sig.figma.com/img/a199/d8db/83aa2b5fd99268cd7694b1aec86f8a2a?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FZga2GmXcrZKdD3sux-MChk889C406Ch6Sl8BcTVycjX52ksuy5lS7jz4wISg5WoOYZNbyz2Oe43huaQxVEMA0ZqNROXqklDP1CC0xwYEqCNmuik21tYoOqLd4ZqY4Wn-UifGG6rxDtkuB1V8v38-OtlIYdVdJiVkr9j8otnCtrfI5joRg9sBz0JDVuspmSuUMS2UKJE-ur9r249rk15z-UV4FycSA38iE43v7DRcUbaxZOj9SsH0c3btME5jmAKoXwm-rIvUH4pFCtN-Mw5WQN1CGeIM9oW7Yk9pK3vZO01Ct-Eit36Bq~vja2LmVP0Jv1RnraGZ4gxn6DK~PvPag__',
+            },
+            {
+                data: '10.03.2024',
+                userPhoto: 'https://s3-alpha-sig.figma.com/img/4641/bee7/10fa0d430a596f3c2828ed2b820590d4?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lx8Me40HCaTbrW31xFNA8fneyDlFaOaxWnwQ5OLUVhrVaC88dmdM89ESE5uDPjPONOiL3xR9ysjM1LbumrBw9LqkmasAd2jfJ4vybESi3Xe5yNMXOsI3~Hq9xPiGgrrmuqLLez02kZro3z0X0rpGV9sQMi0aFtnobHqOzhHE~CZfbc1UHELdsr3BNFlke7~NfysdFz-afpNvJYTOeb4cr6g1IBbcMQtAAwI8zApo7Qu-oYRVGcoB2DPz0wxq-JW1gtHfBXBBmgSRO1GVNb0chpuzPgMVyHKWNYkktXIiZ7RVdUOmX3eflRpkwbYN5uqJkBm0wriwA7OoUVIkJ4hb4Q__',
+                userName:'Виктор',
+                userLastName:' Степанов',
+                rating:5,
+                reviews: 'Решили заказать кухонный гарнитур для небольшой кухни. Среди огромного количества фирм, выбрали компанию "Немецкий стандарт" в г. Краснодар, сейчас с уверенностью можем сказать, что не ошиблись! Благодарны за качественное изготовление мебели. Дизайнер Оксана учла все пожелания. Парни по установке работают быстро, чисто, тихо! Спасибо большое всему коллективу! В дальнейшем будем сотрудничать только с Вами!',
+                productPhoto:'https://s3-alpha-sig.figma.com/img/3497/5dd7/d57a46da0fa0139545c2df86da2c0411?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dY57lh7OtmnsT4zCumeTcWfuK2EgEeXjZ7D-d-tqA0up6pkeTB36mgXZuWAV3dTLPetG6H50VoCBE7qywQGIAIV9ou-LVGT7TX6gBSVVx00tqfjjKniWtQVwL7VJc765p7-ZGP1V8p82lpjuELgfCw~KDJYnaUTNuxgy2BP9sHbDl1vpGhJP9MR4CyK8yRfXpeBeGmD7wr6CTSjqGGl63J86LX3tEv8PE8HGGcTTHQqhwJymYWIEVaUJzvHJ-Hsm5SbPNBOlLkY9Al5d~xiyT4wVQ~8KpQKhNDJ7~spsnVm6jBLczYGVZOJFJ7WWp6ZX0-VVo34-qFCQG0qYyMYseA__',
+            },
         ]
     }
 

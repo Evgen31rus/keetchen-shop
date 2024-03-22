@@ -4,6 +4,7 @@ import IkitchenArguments from "./AvertisingCard"
 import Imenu from "./menu"
 import IHelpSearch from "./HelpSearch"
 import IAdditionalSolution from "./IAdditionalSolutions"
+import IReviews from "./IReviews"
 
 export default interface Ibackend{
     
@@ -13,6 +14,7 @@ export default interface Ibackend{
         additionalSolution:IAdditionalSolution[]
         kitchenArguments: IkitchenArguments[],
         fiveSteps: IfiveSteps[],
+        reviews: IReviews[]
         
     
 }
