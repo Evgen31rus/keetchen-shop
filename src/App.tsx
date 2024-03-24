@@ -1,4 +1,4 @@
-import './App.css';
+
 import Ibackend from './backend';
 import Footer from './components/Footer';
 import Header from './components/Header';
