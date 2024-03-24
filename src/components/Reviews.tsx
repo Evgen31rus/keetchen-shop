@@ -10,7 +10,7 @@ export default function Reviews({ props }: propsTypes) {
   const SliderLineWidth = useRef(null) as RefObject<HTMLDivElement> | null;
   const SliderRef = useRef(null) as RefObject<HTMLDivElement> | null;
   const [width, setWidth] = useState<number>(0);
-  const [countWidth, setCountWidth] = useState<number>();
+
 
   return (
     <div

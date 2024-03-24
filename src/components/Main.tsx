@@ -59,7 +59,7 @@ sm:static sm:overflow-visible sm:w-[100%] `}
         <div
           className={`flex w-[100%]  max-w-[1000px] relative sm:overflow-y-hidden justify-center `}
         >
-          <Designers />
+          <Designers props={props.disainers} />
         </div>
 
         <div
