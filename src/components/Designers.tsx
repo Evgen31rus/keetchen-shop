@@ -38,13 +38,13 @@ export default function Designers({ props }: propsTypes) {
   }, [TriggerAnimation]);
   return (
     <div
-      className={`flex flex-col w-[80%] h-[700px] sm:h-[900px] relative`}
+      className={`ml-5 flex flex-col w-[80%] h-[700px] sm:h-[900px] relative `}
       onLoad={() => setTriggerAnimation(true)}
     >
       <div className={`flex flex-col  w-[100%] `}>
         <h1
           className={`w-[80%]  text-[2.5rem] font-extrabold flex flex-col text-start
-    sm:text-start`}
+    sm:text-start sm:w-[100%]`}
         >
           Не знаете какой выбрать
           <span className={`block text-[#E3010F]`}>дизайн кухни?</span>
@@ -93,8 +93,8 @@ export default function Designers({ props }: propsTypes) {
             onClick={() => {
               setWidth((prev) =>
                 SliderRef?.current != null && SliderLineWidth?.current != null
-                  ? -SliderLineWidth?.current.offsetWidth *
-                      SliderLineWidth?.current.childNodes.length <=
+                  ?( (-SliderLineWidth?.current.offsetWidth /
+                      SliderLineWidth?.current.childNodes.length )*SliderLineWidth?.current.childNodes.length)<=
                     width
                     ? prev - SliderRef.current?.offsetWidth
                     : prev
@@ -116,17 +116,18 @@ export default function Designers({ props }: propsTypes) {
             </svg>
           </div>
           <div
-            className={`  relative flex top-menu-shadow flex w-[100%] h-[100%] bg-white rounded  items-center overflow-x-hidden`}
+            className={`  relative flex top-menu-shadow flex  w-[100%] h-[100%] bg-white rounded  items-center overflow-x-hidden`}
           >
             <div
               ref={SliderLineWidth}
-              className={`flex min-w-[100%] h-[100%] transition duration-300 ease-in-out`}
+              className={`flex h-[100%] transition duration-300 ease-in-out`}
               style={{
                 transform: `translateX(${width}px)`,
+              minWidth: `${SliderLineWidth?.current? width*SliderLineWidth?.current?.childNodes.length: null}px`,
               }}
             >
               {props.map((el) => (
-                <DisainersCard props={el} />
+                <DisainersCard  props={el} />
               ))}
             </div>
           </div>
@@ -143,18 +144,16 @@ sm:w-[100%]
             Обратитесь к нашим{" "}
             <span className={`text-[#E3010F]`}>дизайнерам!</span>
           </h2>
-          <p className={`mb-5 text-[1.2rem] w-[70%]`}>
+          <p className={`mb-5 text-[1.2rem] w-[70%] sm:w-[100%]`}>
             Более 3000 клиентов благодарны нашим дизайнерам за:
           </p>
-          <ul className={`flex flex-col text-[1.1rem] w-[80%] items-center`}>
-            <li className={"flex mb-3 "}>
-              <svg
-                width="40"
-                height="32"
-                viewBox="0 0 26 26"
+          <ul className={`flex flex-col text-[1.1rem] w-[80%] items-center sm:w-[100%]`}>
+            <li className={"flex mb-3 w-[100%] h-[50px] items-center "}>
+            <div >
+            <svg
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className={`mr-3`}
+                className={`mr-3 w-[40px] h-[40px]`}
               >
                 <path
                   d="M12.0002 17.9999C11.8686 18.0007 11.7381 17.9755 11.6163 17.9257C11.4944 17.8759 11.3836 17.8026 11.2902 17.7099L7.29018 13.7099C7.10188 13.5216 6.99609 13.2662 6.99609 12.9999C6.99609 12.7336 7.10188 12.4782 7.29018 12.2899C7.47849 12.1016 7.73388 11.9958 8.00019 11.9958C8.26649 11.9958 8.52188 12.1016 8.71019 12.2899L12.0002 15.5899L18.2902 9.28994C18.4785 9.10164 18.7339 8.99585 19.0002 8.99585C19.2665 8.99585 19.5219 9.10164 19.7102 9.28994C19.8985 9.47824 20.0043 9.73364 20.0043 9.99994C20.0043 10.2662 19.8985 10.5216 19.7102 10.7099L12.7102 17.7099C12.6167 17.8026 12.5059 17.8759 12.3841 17.9257C12.2623 17.9755 12.1318 18.0007 12.0002 17.9999Z"
@@ -165,17 +164,19 @@ sm:w-[100%]
                   fill="#E3010F"
                 />
               </svg>
+              </div>
+
               Скрупулезную и терпеливую работу по созданию проекта идеальной
               кухни.
+     
+              
             </li>
-            <li className={"flex mb-3"}>
-              <svg
-                width="32"
-                height="26"
-                viewBox="0 0 26 26"
+            <li className={"flex mb-3 w-[100%] h-[50px] items-center"}>
+            <div >
+            <svg
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className={`mr-3`}
+                className={`mr-3 w-[40px] h-[40px]`}
               >
                 <path
                   d="M12.0002 17.9999C11.8686 18.0007 11.7381 17.9755 11.6163 17.9257C11.4944 17.8759 11.3836 17.8026 11.2902 17.7099L7.29018 13.7099C7.10188 13.5216 6.99609 13.2662 6.99609 12.9999C6.99609 12.7336 7.10188 12.4782 7.29018 12.2899C7.47849 12.1016 7.73388 11.9958 8.00019 11.9958C8.26649 11.9958 8.52188 12.1016 8.71019 12.2899L12.0002 15.5899L18.2902 9.28994C18.4785 9.10164 18.7339 8.99585 19.0002 8.99585C19.2665 8.99585 19.5219 9.10164 19.7102 9.28994C19.8985 9.47824 20.0043 9.73364 20.0043 9.99994C20.0043 10.2662 19.8985 10.5216 19.7102 10.7099L12.7102 17.7099C12.6167 17.8026 12.5059 17.8759 12.3841 17.9257C12.2623 17.9755 12.1318 18.0007 12.0002 17.9999Z"
@@ -186,16 +187,15 @@ sm:w-[100%]
                   fill="#E3010F"
                 />
               </svg>
+              </div>
               Подбор материалов с экономией до 60% без потери качества.{" "}
             </li>
-            <li className={"flex mb-3"}>
-              <svg
-                width="28"
-                height="26"
-                viewBox="0 0 26 26"
+            <li className={"flex mb-3 w-[100%] h-[50px] items-center"}>
+              <div >
+            <svg
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className={`mr-3`}
+                className={`mr-3 w-[40px] h-[40px]`}
               >
                 <path
                   d="M12.0002 17.9999C11.8686 18.0007 11.7381 17.9755 11.6163 17.9257C11.4944 17.8759 11.3836 17.8026 11.2902 17.7099L7.29018 13.7099C7.10188 13.5216 6.99609 13.2662 6.99609 12.9999C6.99609 12.7336 7.10188 12.4782 7.29018 12.2899C7.47849 12.1016 7.73388 11.9958 8.00019 11.9958C8.26649 11.9958 8.52188 12.1016 8.71019 12.2899L12.0002 15.5899L18.2902 9.28994C18.4785 9.10164 18.7339 8.99585 19.0002 8.99585C19.2665 8.99585 19.5219 9.10164 19.7102 9.28994C19.8985 9.47824 20.0043 9.73364 20.0043 9.99994C20.0043 10.2662 19.8985 10.5216 19.7102 10.7099L12.7102 17.7099C12.6167 17.8026 12.5059 17.8759 12.3841 17.9257C12.2623 17.9755 12.1318 18.0007 12.0002 17.9999Z"
@@ -206,6 +206,7 @@ sm:w-[100%]
                   fill="#E3010F"
                 />
               </svg>
+              </div>
               100% соответствие дизайн-проекта с реальностью.{" "}
             </li>
           </ul>

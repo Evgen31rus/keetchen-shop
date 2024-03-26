@@ -41,11 +41,17 @@ md:overflow-scroll md:w-[100%] md:absolute
 sm:static sm:overflow-visible sm:w-[100%] `}
         >
           <div></div>
-
+          <h1
+            className={`ml-10 w-[80%]  text-[2.5rem] font-extrabold flex flex-col text-start 
+    sm:w-[100%]`}
+          >
+            Какие кухни
+            <span className={`block text-[#E3010F]`}>мы производим?</span>
+          </h1>
           <div
             className={`flex flex-wrap w-[100%] justify-center overflow-hidden
-    md:flex-nowrap md:w-[500%] 
-    sm:flex-col sm:w-[100%] sm:items-center
+    md:hidden
+    sm:flex sm:flex-col sm:w-[100%] sm:items-center
     `}
           >
             {props.products.map((el, index) => {
@@ -57,7 +63,8 @@ sm:static sm:overflow-visible sm:w-[100%] `}
           <HelpInSearching props={props.HelpSearch} />
         </div>
         <div
-          className={`flex w-[100%]  max-w-[1000px] relative sm:overflow-y-hidden justify-center `}
+          className={`flex w-[100%]  max-w-[1000px] relative sm:overflow-y-hidden justify-center 
+          md:hidden sm:hidden`}
         >
           <Designers props={props.disainers} />
         </div>
@@ -68,7 +75,9 @@ sm:m-0 sm:h-[450px]
 `}
         >
           <div className={`w-[80%]`}>
-            <p className={`hidden text-[1.9rem] w-[70%] sm:flex mt-10`}>
+            <p
+              className={`hidden text-[1.5em] w-[70%] sm:flex mt-10 sm:w-[100%]`}
+            >
               Оставьте свой номер телефона и наш дизайнер свяжется с Вами в
               ближайшее время{" "}
             </p>

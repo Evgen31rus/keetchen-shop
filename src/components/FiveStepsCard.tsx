@@ -72,18 +72,20 @@ sm:w-[100%]
         </div>
       </div>
 
-      <div className={`w-[100%] h-[65%] flex flex-col p-5`}>
+      <div className={`w-[100%] h-[65%] flex flex-col p-5 md:min-h-[70%]`}>
         <div className={`w-[100%] flex items-center mb-5`}>
           <div
-            className={`flex w-[30px] h-[30px] rounded-full top-menu-shadow text-[#E3010F] border-[1px] border-[#E3010F] font-black text-[1.3rem] items-center justify-center`}
+            className={`flex w-[30px] h-[30px] rounded-full top-menu-shadow text-[#E3010F] border-[1px] border-[#E3010F] font-black text-[1.3rem] items-center justify-center
+            md:w-[25px] md:h-[25px]
+            `}
           >
             {index + 1}
           </div>
-          <h2 className={`text-[1.3rem] font-bold ml-5 w-[80%]`}>
+          <h2 className={`text-[1.3rem] font-bold ml-5 w-[80%] `}>
             {props.title}
           </h2>
         </div>
-        <p className={`w-[80%]`}>{props.info}</p>
+        <p className={`w-[80%] md:w-[100%] md:overflow-y-scroll`}>{props.info}</p>
       </div>
     </div>
   );

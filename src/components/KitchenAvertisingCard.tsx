@@ -72,8 +72,8 @@ sm:w-[100%]
           </div>
         </div>
 
-        <h3 className={`text-[1.3rem] font-bold mt-5 mb-5`}>{backend.title}</h3>
-        <p className={`w-[80%]`}>{backend.description}</p>
+        <h3 className={`text-[1.3rem] font-bold mt-5 mb-5 md:w-[100%]`}>{backend.title}</h3>
+        <p className={`w-[80%] md:w-[100%]`}>{backend.description}</p>
       </div>
     </>
   );

@@ -22,6 +22,7 @@ export default function ReviewsCard({ props }: propsTypes) {
     <div
       className={` flex
          max-w-[100%] min-w-[100%] h-[260px] bg-white rounded-lg p-10 items-center justify-center
+         md:h-[300px]
         sm:flex-col sm:h-[500px] sm:justify-around
         `}
     >
@@ -60,7 +61,7 @@ sm:mb-10`}
             <Star />
           ))}{" "}
         </p>
-        <p className={`text-[1rem] mb-5`}>{props.reviews} </p>
+        <p className={`text-[1rem] mb-5 md:overflow-y-scroll`}>{props.reviews} </p>
         <MainButton
           textNotActive={`Получить дизайн проект`}
           bgColor={`#E3010F`}

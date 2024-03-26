@@ -29,6 +29,7 @@ sm:top-[90%] sm:w-[98%] sm:h-[230px] sm:left-[0.5%] sm:right-[0.5%] sm:m-auto sm
           </div>
           <div className={`flex flex-col`}>
             <div className={`flex items-center`}>
+              <div>
               <svg
                 width="42"
                 height="42"
@@ -46,13 +47,15 @@ sm:top-[90%] sm:w-[98%] sm:h-[230px] sm:left-[0.5%] sm:right-[0.5%] sm:m-auto sm
                   fill="#E3010F"
                 />
               </svg>
+              </div>
+              
 
               <div
-                className={`hidden flex-col ml-5   mb-5 sm:font-bold sm:flex `}
+                className={`hidden flex-col ml-5   mb-5 sm:font-bold sm:flex sm:w-[100%] `}
               >
                 <p
-                  className={`flex flex-wrap text-[1.5rem] w-[60%] text-wrap
-                sm:text-[1.2rem]`}
+                  className={`flex flex-wrap text-[1.4rem] w-[60%] text-wrap
+                sm:text-[1.2rem] sm:w-[100%]`}
                 >
                   Отвечаем на звонки с 9:00 до 21:00 без выходных!
                 </p>
@@ -60,6 +63,7 @@ sm:top-[90%] sm:w-[98%] sm:h-[230px] sm:left-[0.5%] sm:right-[0.5%] sm:m-auto sm
             </div>
             <div className={`hidden items-center mb-5 sm:flex`}>
               <div className={`flex items-center`}>
+                <div>
                 <svg
                   width="42"
                   height="42"
@@ -77,10 +81,12 @@ sm:top-[90%] sm:w-[98%] sm:h-[230px] sm:left-[0.5%] sm:right-[0.5%] sm:m-auto sm
                     fill="#E3010F"
                   />
                 </svg>
+                </div>
+              
 
-                <div className={`flex flex-col ml-5  sm:font-bold`}>
+                <div className={`flex flex-col ml-5  sm:font-bold sm:w-[100%]`}>
                   <p
-                    className={`text-[1.5rem]
+                    className={`text-[1.4rem] w-[100%]
                 sm:text-[1.2rem]`}
                   >
                     г. Краснодар, ул. Красных Партизан, 483
@@ -93,6 +99,7 @@ sm:top-[90%] sm:w-[98%] sm:h-[230px] sm:left-[0.5%] sm:right-[0.5%] sm:m-auto sm
                 Телефон:
               </p>
               <div className={`flex items-center`}>
+                <div>
                 <svg
                   width="32"
                   height="32"
@@ -106,6 +113,8 @@ sm:top-[90%] sm:w-[98%] sm:h-[230px] sm:left-[0.5%] sm:right-[0.5%] sm:m-auto sm
                     fill="#E3010F"
                   />
                 </svg>
+                </div>
+                
                 <div className={`flex flex-col ml-5 sm:font-bold`}>
                   <p
                     className={`text-[1.5rem] 

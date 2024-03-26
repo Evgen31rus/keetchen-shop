@@ -144,13 +144,7 @@ export default function InfoWorks() {
       </div>
 
       <div className={`flex flex-col m-5 w-[100%]`}>
-        <h1
-          className={`w-[80%]  text-[2.5rem] font-extrabold flex flex-col text-start 
-    sm:text-center`}
-        >
-          Какие кухни
-          <span className={`block text-[#E3010F]`}>мы производим?</span>
-        </h1>
+
         <div
           className={`w-[80%]  h-[5px] items-start
 sm:hidden

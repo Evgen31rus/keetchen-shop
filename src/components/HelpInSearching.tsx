@@ -12,9 +12,9 @@ type propsTypes = {
 export default function HelpInSearching({ props }: propsTypes) {
   return (
     <div className={`flex flex-col w-[80%] items-center m-auto `}>
-      <div className={`flex flex-col m-5 w-[100%] `}>
+      <div className={`flex flex-col m-5 w-[100%] ml-5`}>
         <h1
-          className={`w-[80%]  text-[2.5rem] font-extrabold flex flex-col text-start`}
+          className={`w-[80%]  text-[2.5rem] font-extrabold flex flex-col text-start sm:w-[100%]`}
         >
           Не нашли нужную модель?
           <span className={`block text-[#E3010F]`}>Она у нас точно есть!</span>
@@ -38,7 +38,7 @@ sm:hidden
 
       <div
         className={`flex w-[100%] h-[300px] justify-between 
-sm:flex-col sm:h-[1200px]
+sm:flex-col sm:h-[1500px]
 `}
       >
         {props.map((el, index) => (

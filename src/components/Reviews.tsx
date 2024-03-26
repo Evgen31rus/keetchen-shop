@@ -31,6 +31,7 @@ export default function Reviews({ props }: propsTypes) {
 
       <div
         className={`w-[100%] h-[270px] flex items-center relative
+        md:h-[300px]
 sm:h-[520px]`}
       >
         <div

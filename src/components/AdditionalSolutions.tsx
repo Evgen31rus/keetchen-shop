@@ -12,41 +12,11 @@ type propsTypes = {
 };
 
 export default function AdditionalSolution({ props }: propsTypes) {
-  // const [TriggerAnimation, setTriggerAnimation] = useState(false)
-  //   gsap.registerPlugin(ScrollTrigger)
-  //   useLayoutEffect(()=>{
 
-  //       gsap.to(`.FiveElementCard${index}`,
-  //       {
-  //          opacity:1,
-  //          right: 0,
-  //          duration:2,
-  //           scrollTrigger:{
-  //               trigger:`.FiveElementCard${index}`,
-  //               toggleActions: 'restart none reserve pouse'
-  //           },
-
-  //        }
-  //       )
-
-  //       gsap.to(`.FiveElementCard${index}`,
-  //       {
-  //          opacity:1,
-  //          left: 0,
-  //          duration:2,
-  //           scrollTrigger:{
-  //               trigger:`.FiveElementCard${index}`,
-  //               toggleActions: 'restart none reserve pouse'
-  //           },
-
-  //        }
-  //       )
-
-  //   }, [TriggerAnimation])
 
   return (
     <div className={`flex flex-col w-[80%] items-start m-auto mt-`}>
-      <h1 className={`  w-[80%]  text-[2.5rem] font-extrabold`}>
+      <h1 className={`  ml-5 w-[80%]  text-[2.5rem] font-extrabold`}>
         Наши{" "}
         <span className={`text-[#E3010F] bold`}>
           {" "}
