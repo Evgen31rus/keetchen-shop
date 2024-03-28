@@ -3,6 +3,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import IProductsObgect from "../module";
 import MainButton from "./MainButton";
+import { RootState } from "../store/store";
+import { useSelector } from "react-redux";
 
 type propsTypes = {
   product: IProductsObgect;
@@ -10,6 +12,7 @@ type propsTypes = {
 };
 
 export default function ProductCard({ product, id }: propsTypes) {
+  const state = useSelector((state:RootState) => state.counter)
   const [TriggerAnimation, setTriggerAnimation] = useState(false);
   gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
@@ -34,7 +37,9 @@ export default function ProductCard({ product, id }: propsTypes) {
     });
   }, [TriggerAnimation]);
 
+
   return (
+    
     <div
       className={` 
         ElementCard${id}
@@ -85,6 +90,7 @@ export default function ProductCard({ product, id }: propsTypes) {
             width={70}
             heigt={50}
             heightMobile={50}
+            actions={state.thisModal.consultation}
           />
           <MainButton
             textNotActive={`Рассчитать стоимость`}
@@ -93,6 +99,7 @@ export default function ProductCard({ product, id }: propsTypes) {
             margin={2}
             width={70}
             heigt={50}
+            actions={state.thisModal.costСalculation}
           />
         </div>
       </div>

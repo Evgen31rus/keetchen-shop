@@ -1,3 +1,7 @@
+import { UseDispatch, useDispatch, useSelector } from "react-redux";
+import { RootState } from "../store/store";
+import { HadleIsOpenModal } from "../store/isOpenModalSlice";
+
 type propsTypes = {
   textNotActive: string;
   textActive?: string;
@@ -12,6 +16,7 @@ type propsTypes = {
   widthMobile?: number;
   hiddenMobile?: boolean;
   mdHidden?: boolean;
+  actions?:any
 };
 
 export default function MainButton({
@@ -28,10 +33,16 @@ export default function MainButton({
   widthMobile,
   hiddenMobile,
   mdHidden,
+  actions,
 }: propsTypes) {
+  const dispatch = useDispatch()
+  const state = useSelector((state:RootState) => state)
   return (
     <>
       <button
+      onClick={()=>
+        dispatch(HadleIsOpenModal(actions))
+      }
         className={`
         ${isBorder ? "border-[1px] border-[#E3010F]" : ""}
         icon relative m-${margin} bg-[${bgColor}] w-[${width}%] h-[${heigt}px] text-${colorText} font-bold rounded text-[1.0rem]  opacity-100 z-10 transition-all 
