@@ -3,6 +3,8 @@ import IfiveSteps from "../fiveSteps";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MainButton from "./MainButton";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 type propsTypes = {
   props: IfiveSteps;
@@ -10,6 +12,7 @@ type propsTypes = {
 };
 
 export default function FiveStepsCard({ props, index }: propsTypes) {
+  const state = useSelector((state:RootState) => state.counter)
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false);
   const [TriggerAnimation, setTriggerAnimation] = useState(false);
 
@@ -67,6 +70,7 @@ sm:w-[100%]
               colorText={`white`}
               width={100}
               heigt={40}
+              actions={state.thisModal.consultation}
             />
           </div>
         </div>

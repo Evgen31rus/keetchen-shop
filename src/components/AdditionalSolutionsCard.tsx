@@ -3,6 +3,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MainButton from "./MainButton";
 import IAdditionalSolution from "../IAdditionalSolutions";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 type propsTypes = {
   props: IAdditionalSolution;
@@ -10,6 +12,7 @@ type propsTypes = {
 };
 
 export default function AditionalSolutionsCard({ props, index }: propsTypes) {
+  const state = useSelector((state:RootState) => state.counter)
   const [TriggerAnimation, setTriggerAnimation] = useState(false);
   gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
@@ -64,6 +67,8 @@ sm:w-[100%]  sm:h-[400px]
           bgColor={`#E3010F`}
           colorText={`white`}
           margin={5}
+          actions={state.thisModal.consultation}
+          
         />
       </div>
     </div>

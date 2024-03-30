@@ -1,15 +1,15 @@
-import { useLayoutEffect, useState } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import MainButton from "./MainButton";
 import IReviews from "../IReviews";
 import Star from "./Star";
+import { RootState } from "../store/store";
+import { useSelector } from "react-redux";
 
 type propsTypes = {
   props: IReviews;
 };
 
 export default function ReviewsCard({ props }: propsTypes) {
+  const state = useSelector((state:RootState) => state.counter)
   const starsCount = () => {
     const count = [];
     for (let index = 0; index < props.rating; index++) {
@@ -69,6 +69,7 @@ sm:mb-10`}
           width={70}
           heigt={30}
           hiddenMobile={true}
+          actions={state.thisModal.consultation}
         />
       </div>
 
@@ -102,6 +103,7 @@ sm:w-[100%]`}
           width={100}
           heigt={50}
           mdHidden={true}
+          actions={state.thisModal.consultation}
         />
       </div>
     </div>

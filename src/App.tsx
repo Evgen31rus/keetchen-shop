@@ -22,7 +22,7 @@ function App() {
       <Main props = {backend}/>
 
       <Footer/>
-<div className={`absolute w-[100%] h-[100%] bg-[#000000] bg-opacity-75 transition ease-out duration-300 z-50  ${state.counter.isOpenCostСalculation||state.counter.isOpenConsultation? 'visible bg-opacity-75':'bg-opacity-0 z-[0]'} `}>
+<div className={`absolute w-[100%] h-[100%] bg-[#000000] transition ease-out duration-300 z-50  ${state.counter.isOpenCostСalculation||state.counter.isOpenConsultation? 'visible bg-opacity-75':'bg-opacity-0 z-[-1]'} `}>
       <Modal props={backend.HelpSearch}/>
       </div>
     </div>

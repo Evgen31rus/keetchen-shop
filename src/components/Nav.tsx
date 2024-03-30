@@ -2,9 +2,11 @@ import { useRef, useState } from "react";
 import { MouseEvent } from "react";
 import backend from "../backend";
 import MainButton from "./MainButton";
-import Questions from "./Questions";
+import { RootState } from "../store/store";
+import { useSelector } from "react-redux";
 
 export default function Nav() {
+  const state = useSelector((state:RootState) => state.counter)
   const UlRef = useRef<HTMLUListElement | null>(null);
   const [isClick, setIsClick] = useState<number>(0);
   const [widthElement, setWidthElement] = useState<number | undefined>(
@@ -12,6 +14,7 @@ export default function Nav() {
   );
 
   const HandlerClickMenu = (e: MouseEvent<HTMLLIElement>) => {
+
     setIsClick(e.currentTarget.offsetLeft);
     setWidthElement(e.currentTarget.offsetWidth);
   };
@@ -117,6 +120,7 @@ export default function Nav() {
             heigt={30}
             bgColor={`#E3010F`}
             colorText={`white`}
+            actions={state.thisModal.costСalculation}
           />
         </div>
 

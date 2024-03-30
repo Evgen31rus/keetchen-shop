@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 import MainButton from "./MainButton";
 
 export default function NavMobile() {
+  const state = useSelector((state:RootState) => state.counter)
   return (
     <>
       <div className={`hidden w-[100%] flex justify-between p-3 sm:flex`}>
@@ -128,6 +131,8 @@ export default function NavMobile() {
               heigt={30}
               colorText={`white`}
               bgColor={`#E3010F`}
+              actions={state.thisModal.costСalculation}
+              
             />
           </div>
         </div>

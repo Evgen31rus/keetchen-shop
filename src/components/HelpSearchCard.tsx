@@ -3,6 +3,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MainButton from "./MainButton";
 import IHelpSearch from "../HelpSearch";
+import { RootState } from "../store/store";
+import { useSelector } from "react-redux";
 
 type propsTypes = {
   props: IHelpSearch;
@@ -10,6 +12,7 @@ type propsTypes = {
 };
 
 export default function HelpSearchCard({ props, index }: propsTypes) {
+  const state = useSelector((state:RootState) => state.counter)
   const [TriggerAnimation, setTriggerAnimation] = useState(false);
   gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
@@ -72,6 +75,7 @@ sm:text-[1.5rem]`}
           heigt={40}
           bgColor={`#E3010F`}
           colorText={`white`}
+          actions={state.thisModal.consultation}
         />
       </div>
     </div>

@@ -15,12 +15,15 @@ import FiveSteps from "./FiveSteps";
 import Ibackend from "../Ibackend";
 import Questions from "./Questions";
 import Contacts from "./Сontacts";
+import { RootState } from "../store/store";
+import { useSelector } from "react-redux";
 
 type propsTypes = {
   props: Ibackend;
 };
 
 export default function Main({ props }: propsTypes) {
+  const state = useSelector((state:RootState) => state.counter)
   return (
     <div
       className={`flex flex-col items-center justify-center w-[100%] overflow-hidden`}
@@ -98,6 +101,7 @@ sm:flex sm:flex-col`}
                 heightMobile={40}
                 bgColor={`#E3010F`}
                 margin={5}
+                actions={state.thisModal.consultation}
               />
               <MainButton
                 textNotActive={`Прикрепить свой проект`}

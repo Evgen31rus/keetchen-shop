@@ -3,6 +3,8 @@ import IkitchenArguments from "../AvertisingCard";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MainButton from "./MainButton";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 type propsTypes = {
   backend: IkitchenArguments;
@@ -10,6 +12,7 @@ type propsTypes = {
 };
 
 export default function KitchenAvertisingCard({ backend, index }: propsTypes) {
+  const state = useSelector((state:RootState) => state.counter)
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false);
   const [TriggerAnimation, setTriggerAnimation] = useState(false);
   gsap.registerPlugin(ScrollTrigger);
@@ -67,7 +70,9 @@ sm:w-[100%]
                 colorText={`white`}
                 width={100}
                 heigt={40}
+                actions={state.thisModal.consultation}
               />
+
             </div>
           </div>
         </div>

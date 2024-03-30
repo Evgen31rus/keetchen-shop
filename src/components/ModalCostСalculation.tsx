@@ -13,21 +13,22 @@ export default function({props}:propsTypes){
         <>
 <div className={`flex w-[90%]`}>
       <h1
-          className={`text-[2.5rem] font-extrabold flex  sm:w-[100%]`}
+          className={`text-[2.5rem] font-extrabold flex  flex-wrap
+          sm:w-[100%] sm:text-[1.3rem]`}
         >
           Узнайте цену
-          <span className={` block text-[#E3010F] ml-3`}> вашей кухни</span>
+          <span className={` block text-[#E3010F] ml-3 sm:m-0` }> вашей кухни</span>
         </h1>
         </div>
       <div
-        className={`top-menu-shadow flex flex-col w-[90%] rounded-2xl  justify-around`}
+        className={`top-menu-shadow flex flex-col w-[90%] rounded-2xl  justify-around `}
       >
-        <h2 className={`flex text-[1.2rem]  font-semibold ml-5 mt-5 mb-5`}>Стиль:</h2>
-        <div className={`flex w-[100%] h-[120px] justify-around `}>
+        <h2 className={`flex text-[1.2rem]  font-semibold ml-5 mt-5 mb-5 sm:text-[0.9rem]`}>Стиль:</h2>
+        <div className={`flex w-[100%] h-[120px] justify-around sm:flex-wrap sm:h-[220px]`}>
           {
           props.map((el, index) => (
             <div
-              className={`cursor-pointer top-menu-shadow flex flex-col w-[20%] h-[90px] rounded-2xl justify-around`}
+              className={`cursor-pointer top-menu-shadow flex flex-col w-[20%] h-[90px] rounded-2xl justify-around sm:w-[40%]`}
             >
               <div
                 className={`w-[100%] h-[70%] rounded-t-2xl bg-cover bg-center z-30`}
@@ -36,12 +37,12 @@ export default function({props}:propsTypes){
                 }}
               ></div>
               <div className={`h-[30%]`}>
-                <h2 className={`flex w-[100%] h-[100%] justify-center items-center text-[1rem] font-semibold`}>{el.title}</h2>
+                <h2 className={`flex w-[100%] h-[100%] justify-center items-center text-[1rem] font-semibold sm:text-[0.8rem]`}>{el.title}</h2>
               </div>
             </div>
           ))}
           <div
-            className={`cursor-pointer top-menu-shadow flex flex-col w-[20%] h-[90px] rounded-2xl `}
+            className={`cursor-pointer top-menu-shadow flex flex-col w-[20%] h-[90px] rounded-2xl sm:w-[40%]`}
           >
             <div
               className={`w-[100%] h-[70%] rounded-t-2xl bg-cover bg-center z-30`}
@@ -50,7 +51,7 @@ export default function({props}:propsTypes){
               }}
             ></div>
             <div className={`h-[30%]`}>
-            <h2 className={`flex w-[100%] h-[100%] justify-center items-center text-[1rem] font-semibold`}>Другое</h2>
+            <h2 className={`flex w-[100%] h-[100%] justify-center items-center text-[1rem] font-semibold sm:text-[0.8rem]`}>Другое</h2>
             </div>
           </div>
         </div>
@@ -61,22 +62,22 @@ export default function({props}:propsTypes){
         className={`top-menu-shadow flex flex-col w-[90%] rounded-2xl `}
       >
         <h2 className={`flex text-[1.2rem]  font-semibold ml-5 mt-5`}>Форма:</h2>
-        <div className={`flex w-[100%] h-[80px] justify-around items-center `}>
+        <div className={`flex w-[100%] h-[80px] justify-around items-center flex-wrap sm:justify-around sm:min-h-[150px]`}>
        
-       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full`}>
+       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full sm:w-[50px] sm:h-[50px] sm:m-2`}>
        <svg width="29" height="4" viewBox="0 0 29 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="29" width="4" height="29" rx="1" transform="rotate(90 29 0)" fill="#E3010F"/>
 </svg>
 
        </div>
-       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full`}>
+       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full sm:w-[50px] sm:h-[50px] sm:m-2`}>
        <svg width="29" height="14" viewBox="0 0 29 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect y="4" width="4" height="29" rx="1" transform="rotate(-90 0 4)" fill="#E3010F"/>
 <rect width="4" height="14" rx="1" fill="#E3010F"/>
 </svg>
 
        </div>
-       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full`}>
+       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full sm:w-[50px] sm:h-[50px] sm:m-2`}>
        <svg width="30" height="14" viewBox="0 0 30 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="4" height="14" rx="1" fill="#E3010F"/>
 <rect x="26" width="4" height="14" rx="1" fill="#E3010F"/>
@@ -84,14 +85,14 @@ export default function({props}:propsTypes){
 </svg>
 
        </div>
-       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full`}>
+       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full sm:w-[50px] sm:h-[50px] sm:m-2`}>
        <svg width="31" height="14" viewBox="0 0 31 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.5" y="14" width="4" height="30" rx="1" transform="rotate(-90 0.5 14)" fill="#E3010F"/>
 <rect x="0.5" y="4" width="4" height="30" rx="1" transform="rotate(-90 0.5 4)" fill="#E3010F"/>
 </svg>
 
        </div>
-       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full`}>
+       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full sm:w-[50px] sm:h-[50px] sm:m-2`}>
 
        <svg width="31" height="14" viewBox="0 0 31 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.5" y="14" width="4" height="19" rx="1" transform="rotate(-90 0.5 14)" fill="#E3010F"/>
@@ -100,7 +101,7 @@ export default function({props}:propsTypes){
 </svg>
 
        </div>
-       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full`}>
+       <div className={`cursor-pointer top-menu-shadow flex justify-center items-center w-[50px] h-[50px] bg-white rounded-full sm:w-[50px] sm:h-[50px] sm:m-2`}>
        <svg width="31" height="14" viewBox="0 0 31 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="19.5" y="14" width="4" height="10" rx="1" transform="rotate(-90 19.5 14)" fill="#E3010F"/>
 <rect x="4.5" y="14" width="4" height="14" rx="1" transform="rotate(180 4.5 14)" fill="#E3010F"/>
@@ -115,7 +116,7 @@ export default function({props}:propsTypes){
         
       
       <div
-        className={`top-menu-shadow flex flex-col w-[90%] rounded-2xl`}
+        className={`top-menu-shadow flex flex-col w-[90%] rounded-2xl sm:hidden`}
       >
         <h2 className={`flex text-[1.2rem]  font-semibold ml-5 mt-5`}>Площадь кухни:</h2>
         <div className={` flex w-[100%] h-[65px] justify-around items-center `}>
@@ -129,13 +130,13 @@ export default function({props}:propsTypes){
 
       </div>
       <div className={`w-[90%] `}>
-        <p className={`w-[60%] text-[1.4rem]`}>
+        <p className={`w-[60%] text-[1.4rem] sm:hidden`}>
         Оставьте свой номер телефона сейчас и наш дизайнер свяжется с Вами в ближайшее время!
         </p>
         </div>
-<div className={`flex w-[90%] `}>
-      <div className={`w-[30%] mr-5`}><MainButton textNotActive={`Номер телефона`} isBorder={true} width={100} heigt={40} /></div>
-      <div className={`w-[30%] `}><MainButton textNotActive={`Рассчитать стоимость`} colorText={`white`} width={100} heigt={40} bgColor={`#E3010F`} actions={state.thisModal.costСalculation}/></div>
+<div className={`flex w-[90%] sm:w-[100%] justify-center`}>
+      <div className={`w-[30%] mr-5 sm:w-[40%]`}><MainButton textNotActive={`Номер телефона`} isBorder={true} width={100} heigt={40} /></div>
+      <div className={`w-[30%] sm:w-[40%]`}><MainButton textNotActive={`Рассчитать стоимость`} colorText={`white`} width={100} heigt={40} bgColor={`#E3010F`} actions={state.thisModal.costСalculation}/></div>
       </div>
       </>
     )

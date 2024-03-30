@@ -1,8 +1,11 @@
 import MainButton from "./MainButton";
 import backend from "../backend";
 import KitchenAvertisingCard from "./KitchenAvertisingCard";
+import { RootState } from "../store/store";
+import { useSelector } from "react-redux";
 
 export default function KitchenAvertising() {
+  const state = useSelector((state:RootState) => state.counter)
   return (
     <div className={`flex flex-col w-[80%] items-start m-auto mt-`}>
       <h1 className={`  w-[80%]  text-[2.5rem] font-extrabold`}>
@@ -41,6 +44,7 @@ sm:flex-col
             bgColor={`#E3010F`}
             colorText={`white`}
             margin={5}
+            actions={state.thisModal.costСalculation}
           />
           <MainButton
             textNotActive={`Получить весь каталог`}
@@ -50,6 +54,7 @@ sm:flex-col
             heightMobile={50}
             isBorder={true}
             margin={5}
+            actions={state.thisModal.consultation}
           />
         </div>
       </div>
