@@ -16,7 +16,8 @@ type propsTypes = {
   widthMobile?: number;
   hiddenMobile?: boolean;
   mdHidden?: boolean;
-  actions?:any
+  actions?:any,
+
 };
 
 export default function MainButton({
@@ -34,6 +35,7 @@ export default function MainButton({
   hiddenMobile,
   mdHidden,
   actions,
+
 }: propsTypes) {
   const dispatch = useDispatch()
   const state = useSelector((state:RootState) => state)

@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import isOpenModelSlice from './isOpenModalSlice'
+import validFormSlice from './validFormSlice'
 
 export const store = configureStore({
   reducer: {
-    counter: isOpenModelSlice
+    counter: isOpenModelSlice,
+    validFormSlice: validFormSlice
   },
 })
 
