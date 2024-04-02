@@ -45,7 +45,7 @@ export default function ModalConsultation(){
             } 
             if(isNaN(Number(event.currentTarget.value))||event.currentTarget.value.toString().split('')[0]!='8'){
          
-                setValueInput(8)
+                setValueInput(8) 
             }
 
             
