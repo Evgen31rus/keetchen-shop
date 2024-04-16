@@ -56,7 +56,8 @@ export default function MainButton({
 
                 `}
                 style={{
-                  fontSize: `clamp(0.8rem, 3vh, 1.0rem )`
+                  fontSize: `clamp(0.8rem, 3vh, 1.0rem )`,
+                  color: `${colorText}`
                 }}
       >
         {textNotActive}
