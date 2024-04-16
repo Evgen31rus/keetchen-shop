@@ -38,7 +38,7 @@ sm:hidden
 
       <div
         className={`flex w-[100%] h-[300px] justify-between 
-sm:flex-col sm:h-[1500px]
+sm:flex-col sm:h-[1700px]
 `}
       >
         {props.map((el, index) => (
