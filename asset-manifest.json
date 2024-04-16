@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/keetchen-shop/static/css/main.6296e883.css",
-    "main.js": "/keetchen-shop/static/js/main.5146f3d8.js",
+    "main.js": "/keetchen-shop/static/js/main.a9b43e83.js",
     "static/js/453.139ef45e.chunk.js": "/keetchen-shop/static/js/453.139ef45e.chunk.js",
     "static/media/header.png": "/keetchen-shop/static/media/header.a3da092bfbc1d7042ce1.png",
     "static/media/main-fon.png": "/keetchen-shop/static/media/main-fon.4fa988a51c25d1c221e1.png",
@@ -10,11 +10,11 @@
     "static/media/contacts-fon.png": "/keetchen-shop/static/media/contacts-fon.7fd707e0a6f8ae6b87ab.png",
     "index.html": "/keetchen-shop/index.html",
     "main.6296e883.css.map": "/keetchen-shop/static/css/main.6296e883.css.map",
-    "main.5146f3d8.js.map": "/keetchen-shop/static/js/main.5146f3d8.js.map",
+    "main.a9b43e83.js.map": "/keetchen-shop/static/js/main.a9b43e83.js.map",
     "453.139ef45e.chunk.js.map": "/keetchen-shop/static/js/453.139ef45e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6296e883.css",
-    "static/js/main.5146f3d8.js"
+    "static/js/main.a9b43e83.js"
   ]
 }
