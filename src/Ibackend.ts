@@ -6,6 +6,7 @@ import IHelpSearch from "./HelpSearch"
 import IAdditionalSolution from "./IAdditionalSolutions"
 import IReviews from "./IReviews"
 import IDisainers from "./IDisainers"
+import Isvg from "./Isvg"
 
 export default interface Ibackend{
     
@@ -16,7 +17,11 @@ export default interface Ibackend{
         kitchenArguments: IkitchenArguments[],
         disainers:IDisainers[],
         fiveSteps: IfiveSteps[],
-        reviews: IReviews[]
+        reviews: IReviews[],
+        svg: string[],
+        roomArea: string[]
+
+   
         
     
 }

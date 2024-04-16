@@ -40,7 +40,7 @@ export default function AditionalSolutionsCard({ props, index }: propsTypes) {
   return (
     <div
       className={`AdditionalSolutionsElementCard${index} flex flex-col w-[30%] h-[250px]  bg-white m-5 top-menu-shadow rounded-2xl
-sm:w-[100%]  sm:h-[400px]
+sm:w-[100%]  sm:h-[400px] md:h-[300px]
 `}
       onLoad={() => setTriggerAnimation(true)}
     >
@@ -60,16 +60,18 @@ sm:w-[100%]  sm:h-[400px]
         >
           {props.title}
         </h3>
+        <div className={`w-[100%] `}>
         <MainButton
           textNotActive={`Получить консультацию`}
           width={80}
-          heigt={30}
+          heigt={40}
           bgColor={`#E3010F`}
           colorText={`white`}
           margin={5}
           actions={state.thisModal.consultation}
           
         />
+        </div>
       </div>
     </div>
   );

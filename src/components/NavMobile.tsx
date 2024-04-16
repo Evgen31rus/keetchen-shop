@@ -1,14 +1,17 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import MainButton from "./MainButton";
+import { HadleIsOpenModal } from "../store/isOpenModalSlice";
 
 export default function NavMobile() {
   const state = useSelector((state:RootState) => state.counter)
+  const dispatch = useDispatch()
   return (
     <>
       <div className={`hidden w-[100%] flex justify-between p-3 sm:flex`}>
         <div className={`flex-col w-[50%] items-start justify-between `}>
-          <div className={`flex flex-col mb-5`}>
+          <div className={`flex flex-col mb-5`}
+          >
             <svg
               width="133"
               height="44"
@@ -88,14 +91,16 @@ export default function NavMobile() {
           </div>
         </div>
 
-        <div className={`flex flex-col w-[50%]  items-end `}>
+        <div className={`flex flex-col w-[50%]  items-end`}
+        >
           <svg
             width="36"
             height="35"
             viewBox="0 0 36 35"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={``}
+            className={`z-10`}
+            onClick={()=>dispatch(HadleIsOpenModal(state.thisModal.mobileMenu))}
           >
             <rect
               x="1"

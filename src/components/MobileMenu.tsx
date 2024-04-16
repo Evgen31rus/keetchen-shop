@@ -1,38 +1,53 @@
-import { MouseEventHandler, useRef, useState } from "react";
-import { MouseEvent } from "react";
-import backend from "../backend";
-import MainButton from "./MainButton";
+
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import { useSelector } from "react-redux";
+import MainButton from "./MainButton";
+import { ChangeEvent, useState } from "react";
+import { Root } from "react-dom/client";
+import { HadleIsSearchForm } from "../store/validFormSlice";
+import Imenu from "../menu";
 import { Link, animateScroll as scroll } from "react-scroll";
+import Ibackend from "../Ibackend";
 import { link } from "fs";
+import { HadleIsOpenModal } from "../store/isOpenModalSlice";
 
-export default function Nav() {
-   const state = useSelector((state:RootState) => state.counter)
-  const UlRef = useRef<HTMLUListElement | null>(null);
-  const [isClick, setIsClick] = useState<number|undefined>(UlRef.current?.offsetWidth);
-  const [widthElement, setWidthElement] = useState<number | undefined>(50);
+type propsTypes = {
+    props: Ibackend
+}
 
-  const HandlerClickMenu = (e: MouseEvent<HTMLElement>) => {
+export default function ModileMenu({props}:propsTypes){
+    const dispatch = useDispatch()
+    useSelector((state:RootState) => state.counter)
+    const [isClick, setIsClick]=useState<boolean>(false)
+    const state = useSelector((state:RootState) => state)
+    return(
+    <>
+<div className={`w-[100%] h-[100%] flex flex-col  items-center p-10`}>
 
-    setIsClick(e.currentTarget.offsetLeft);
-    setWidthElement(e.currentTarget.offsetWidth);
-  };
+<ul className={`h-[100%] flex flex-col justify-between`}>
+<h1 className={`text-[2.5rem] font-bold text-[#E3010F] h-[60px] mt-5`}>Меню</h1>
+    {
+        props.menu.map(menu=>(
+            <li className={`flex h-[50px]`}> <Link
+            to={menu}
+            spy={true}
+            smooth={true}
+            offset={-160}
+            duration={500}
+            className={`text-[2.5rem] font-bold`}
+            onClick={()=>dispatch(HadleIsOpenModal(state.counter.thisModal.modal))}
+            >{menu}
+            </Link></li>
+        ))
+    }
 
-
-  return (
-    <div className={` flex-col  `}>
-      <div className={`flex w-[100%]  justify-center sm:hidden`}>
-        <div className={`flex flex-col p-5  w-1/5 items-center `}>
-          <svg
-            width="133"
+<svg
+            width="150"
             height="44"
             viewBox="0 0 133 44"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`w-[195px]
-                md:w-[133px]
-                `}
+            className={`mt-5 flex `}
           >
             <path
               fill-rule="evenodd"
@@ -63,115 +78,12 @@ export default function Nav() {
               fill="#E3010F"
             />
           </svg>
+    
+</ul>
 
-          <span className={`text-[0.9rem]`}>Кухни на заказ в Краснодаре</span>
-        </div>
 
-        <div
-          className={`border-r-[1px] border-[#E3010F] h-[50px] m-auto`}
-        ></div>
 
-        <div className={`p-5 flex  w-1/5 items-center`}>
-          <span
-            className={`text-[1.0rem] 
-                md:text-[0.8rem]`}
-          >
-            Отвечаем на звонки с 9:00 до 21:00 без выходных
-          </span>
-        </div>
-
-        <div
-          className={`border-r-[1px] border-[#E3010F] h-[50px] m-auto`}
-        ></div>
-
-        <div className={`flex p-5  w-1/5 items-center`}>
-          <svg
-            width="42"
-            height="45"
-            viewBox="0 0 42 45"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M35.2856 31.1474C35.1111 31.0883 34.9267 31.0644 34.7429 31.077C34.5591 31.0896 34.3796 31.1385 34.2148 31.2209C34.05 31.3033 33.9032 31.4176 33.7829 31.557C33.6625 31.6965 33.571 31.8585 33.5136 32.0335C33.4562 32.2086 33.4341 32.3933 33.4485 32.5769C33.4629 32.7606 33.5136 32.9396 33.5976 33.1035C33.6817 33.2675 33.7973 33.4132 33.938 33.5321C34.0787 33.6511 34.2415 33.741 34.4171 33.7967C37.6061 34.8422 39.0335 36.0906 39.0335 36.8625C39.0335 38.8052 31.8052 41.7417 20.9108 41.7417C10.0164 41.7417 2.78811 38.8052 2.78811 36.8625C2.78811 36.0906 4.21552 34.8422 7.40454 33.7967C7.58016 33.741 7.743 33.6511 7.88366 33.5321C8.02431 33.4132 8.13999 33.2675 8.22401 33.1035C8.30802 32.9396 8.3587 32.7606 8.37313 32.5769C8.38755 32.3933 8.36543 32.2086 8.30804 32.0335C8.25065 31.8585 8.15913 31.6965 8.03878 31.557C7.91842 31.4176 7.77161 31.3033 7.60684 31.2209C7.44206 31.1385 7.26259 31.0896 7.0788 31.077C6.895 31.0644 6.71053 31.0883 6.53605 31.1474C1.13403 32.9186 0 35.2329 0 36.8625C0 41.8955 10.5194 44.5298 20.9108 44.5298C31.3022 44.5298 41.8216 41.8955 41.8216 36.8625C41.8216 35.2329 40.6876 32.9186 35.2856 31.1474Z"
-              fill="#E3010F"
-            />
-            <path
-              d="M20.0407 38.6485C20.2879 38.8459 20.5949 38.9534 20.9113 38.9534C21.2276 38.9534 21.5346 38.8459 21.7818 38.6485C22.2917 38.24 34.2541 28.5266 34.2541 16.0509C34.2541 12.5121 32.8484 9.11833 30.3461 6.61605C27.8438 4.11377 24.45 2.70801 20.9112 2.70801C17.3725 2.70801 13.9787 4.11377 11.4764 6.61605C8.97412 9.11833 7.56836 12.5121 7.56836 16.0509C7.56839 28.5266 19.5308 38.2401 20.0407 38.6485ZM16.1316 16.0509C16.1317 15.1056 16.412 14.1815 16.9373 13.3955C17.4625 12.6096 18.209 11.997 19.0823 11.6352C19.9557 11.2735 20.9167 11.1789 21.8439 11.3633C22.771 11.5478 23.6226 12.003 24.2911 12.6715C24.9595 13.3399 25.4147 14.1916 25.5991 15.1187C25.7835 16.0459 25.6888 17.0069 25.3271 17.8803C24.9653 18.7536 24.3527 19.5001 23.5667 20.0253C22.7807 20.5504 21.8566 20.8308 20.9113 20.8308C19.6436 20.8307 18.4279 20.3271 17.5315 19.4307C16.6352 18.5343 16.1316 17.3186 16.1316 16.051V16.0509Z"
-              fill="#E3010F"
-            />
-          </svg>
-
-          <span
-            className={`text-[1.0rem] ml-2 
-                md:text-[0.8rem]`}
-          >
-            г. Краснодар, ул. Красных Партизан, 483
-          </span>
-        </div>
-
-        <div
-          className={`border-r-[1px] border-[#E3010F] h-[50px] m-auto`}
-        ></div>
-
-        <div className={`flex  w-1/5 items-center justify-center `}>
-          <MainButton
-            textNotActive={"Расчитать стоимость"}
-            width={80}
-            heigt={30}
-            bgColor={`#E3010F`}
-            colorText={`white`}
-            actions={state.thisModal.costСalculation}
-          />
-        </div>
-
-        <div
-          className={`border-r-[1px] border-[#E3010F] h-[50px] m-auto`}
-        ></div>
-
-        <div
-          className={`flex flex-col p-5 text-[1.2rem] relative w-1/5 items-center
-            md:text-[1.0rem]`}
-        >
-          <span className={`w-[100%] text-end `}>+7 (8612) 17-93-76</span>
-          <span className={`w-[100%] text-end `}>+7 (989) 277-94-30</span>
-          <a
-            href={`#`}
-            className={`w-[100%] text-[#E3010F] text-end text-[1.0rem]  pr-5 underline`}
-          >
-            Вам перезвонить?
-          </a>
-        </div>
-      </div>
-
-      <div className={`flex flex-col w-[100%] mt-2 mb-2   sm:hidden`}>
-      <ul
-          className={`flex  w-[100%] h-[30px] justify-around text-[1.2rem] uppercase`}
-          ref={UlRef}
-        >
-          {backend.menu.map((el, index) => (
-            <li
-              className={`cursor-pointer border-[#E3010F] transition-all Z-20`}
-              key={index}
-              onClick={HandlerClickMenu}
-            >
-             <Link
-              to={el}
-              spy={true}
-              smooth={true}
-              offset={-160}
-              duration={500}
-              className={`w-[100%] h-[40px] Z-0`}
-              >{el}
-              </Link>
-            </li>
-          ))}
-        </ul>
-       
-      </div>
-    </div>
-  );
+</div>
+    </>
+    )
 }
-
-              {/* 
-        */}

@@ -81,52 +81,47 @@ border-radius: 5%;
 }
 
 .ElementCard0,
-.ElementCard2,
+.ElementCard1,
+.ElementCard3,
 .ElementCard4,
 .ElementCard6,
-.ElementCard8{
+.ElementCard7
+{
 position: relative;
 left:-400px;
 opacity: 0;
 }
-.ElementCard1,
-.ElementCard3,
+.ElementCard2,
 .ElementCard5,
-.ElementCard7,
-.ElementCard9{
+.ElementCard8{
 position: relative;
 right:-400px;
 opacity: 0;
 }
 
 .FiveElementCard0,
-.FiveElementCard2,
-.FiveElementCard4,
-.FiveElementCard6,
-.FiveElementCard8{
+.FiveElementCard1,
+.FiveElementCard3{
 position: relative;
 left:-400px;
 opacity: 0;
 }
-.FiveElementCard1,
-.FiveElementCard3,
-.FiveElementCard5,
-.FiveElementCard7,
-.FiveElementCard9{
+.FiveElementCard2,
+.FiveElementCard4{
 position: relative;
 right:-400px;
 opacity: 0;
 }
 
 .ArgumentsElementCard0,
-.ArgumentsElementCard2,
+.ArgumentsElementCard1,
+.ArgumentsElementCard3,
 .ArgumentsElementCard4{
 position: relative;
 left:-400px;
 opacity: 0;
 }
-.ArgumentsElementCard1,
-.ArgumentsElementCard3,
+.ArgumentsElementCard2,
 .ArgumentsElementCard5{
 position: relative;
 right:-400px;
@@ -135,31 +130,15 @@ opacity: 0;
 
 /*  */
 
-.ArgumentsElementCard0,
-.ArgumentsElementCard2,
-.ArgumentsElementCard4{
-position: relative;
-left:-400px;
-opacity: 0;
-}
-.ArgumentsElementCard1,
-.ArgumentsElementCard3,
-.ArgumentsElementCard5{
-position: relative;
-right:-400px;
-opacity: 0;
-}
+
 
 .HelpSearchElementCard0,
-.HelpSearchElementCard2,
-.HelpSearchElementCard4{
+.HelpSearchElementCard1{
 position: relative;
 left:-400px;
 opacity: 0;
 }
-.HelpSearchElementCard1,
-.HelpSearchElementCard3,
-.HelpSearchElementCard5{
+.HelpSearchElementCard2{
 position: relative;
 right:-400px;
 opacity: 0;
@@ -168,22 +147,53 @@ opacity: 0;
 
 
 .AdditionalSolutionsElementCard0,
-.AdditionalSolutionsElementCard2,
-.AdditionalSolutionsElementCard4{
+.AdditionalSolutionsElementCard1{
 position: relative;
 left:-400px;
 opacity: 0;
 }
-.AdditionalSolutionsElementCard1,
-.AdditionalSolutionsElementCard3,
-.AdditionalSolutionsElementCard5{
+.AdditionalSolutionsElementCard2{
 position: relative;
 right:-400px;
 opacity: 0;
 }
 
+
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+
+
 @media screen and (max-width:639px) {
   .header-banner{
     background-position-x: 70%;
+  }
+  
+}
+
+@media screen and (max-width:700px){
+  *{
+    font-size: 92%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  *{
+    font-size: 102%;
   }
 }

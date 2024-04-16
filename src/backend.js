@@ -3,7 +3,7 @@ import AdditionalSolution from "./components/AdditionalSolutions"
 let backend =
 
 {
-    menu: ['Цены', 'Акция', 'Материалы', 'Как заказать', 'Наши работы', 'Отзывы', 'Контакты'],
+    menu: ['Каталог', 'Модели', 'Консультация', 'Дополнительно', 'Как заказать', 'Отзывы', 'Контакты'],
     HelpSearch: [
         {
             photo: 'https://s3-alpha-sig.figma.com/img/40b9/3f25/ad29d92a900e308f6d22c945a250357b?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j2uYk5EBsBHk8DVw04fuWTZptGNzK~qswM4w8y951vDmpL2~iJ-6z5f4GrU~aAsLeMQzZnVOIABsLMnaJW5Auwk8gTP0qFKe3ZXOBI9hj6VBHr14pcy0KL0sUlVLJW2I42XW4QSV-SlNAXjQtk8wEnlXZmzRGKGORuiVaBmh4JNMERpA2zfWxRtKPRD3eN1dKPZsCOUh9AFa3bfWmh02pb9EJg3SQRgAUXRTODwlaRjmF6keaijO1LUTVSmLxP3rGOhREsWI-f~fH08iLdLGEWg315lF2Zk6JlxfVG1GCa-O4ePcsPbztLL~rOz6TLT3VGVoe3NhN2IHzvPxJ0YdCw__',
@@ -267,6 +267,17 @@ let backend =
             reviews: 'Решили заказать кухонный гарнитур для небольшой кухни. Среди огромного количества фирм, выбрали компанию "Немецкий стандарт" в г. Краснодар, сейчас с уверенностью можем сказать, что не ошиблись! Благодарны за качественное изготовление мебели. Дизайнер Оксана учла все пожелания. Парни по установке работают быстро, чисто, тихо! Спасибо большое всему коллективу! В дальнейшем будем сотрудничать только с Вами!',
             productPhoto: 'https://s3-alpha-sig.figma.com/img/3497/5dd7/d57a46da0fa0139545c2df86da2c0411?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dY57lh7OtmnsT4zCumeTcWfuK2EgEeXjZ7D-d-tqA0up6pkeTB36mgXZuWAV3dTLPetG6H50VoCBE7qywQGIAIV9ou-LVGT7TX6gBSVVx00tqfjjKniWtQVwL7VJc765p7-ZGP1V8p82lpjuELgfCw~KDJYnaUTNuxgy2BP9sHbDl1vpGhJP9MR4CyK8yRfXpeBeGmD7wr6CTSjqGGl63J86LX3tEv8PE8HGGcTTHQqhwJymYWIEVaUJzvHJ-Hsm5SbPNBOlLkY9Al5d~xiyT4wVQ~8KpQKhNDJ7~spsnVm6jBLczYGVZOJFJ7WWp6ZX0-VVo34-qFCQG0qYyMYseA__',
         },
+    ],
+    svg: [ 
+        '<svg width="29" height="4" viewBox="0 0 29 4" fill="none" xmlns="http://www.w3.org/2000/svg"}><rect x="29" width="4" height="29" rx="1" transform="rotate(90 29 0)" fill="#E3010F"/></svg>',
+        '<svg width="29" height="14" viewBox="0 0 29 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="4" width="4" height="29" rx="1" transform="rotate(-90 0 4)" fill="#E3010F"/><rect width="4" height="14" rx="1" fill="#E3010F"/></svg>',
+        '<svg width="30" height="14" viewBox="0 0 30 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="4" height="14" rx="1" fill="#E3010F"/><rect x="26" width="4" height="14" rx="1" fill="#E3010F"/><rect y="4" width="4" height="30" rx="1" transform="rotate(-90 0 4)" fill="#E3010F"/></svg>',
+        '<svg width="31" height="14" viewBox="0 0 31 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="14" width="4" height="30" rx="1" transform="rotate(-90 0.5 14)" fill="#E3010F"/><rect x="0.5" y="4" width="4" height="30" rx="1" transform="rotate(-90 0.5 4)" fill="#E3010F"/></svg>',
+        '<svg width="31" height="14" viewBox="0 0 31 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="14" width="4" height="19" rx="1" transform="rotate(-90 0.5 14)" fill="#E3010F"/><rect x="26.5" width="4" height="14" rx="1" fill="#E3010F"/><rect x="0.5" y="4" width="4" height="30" rx="1" transform="rotate(-90 0.5 4)" fill="#E3010F"/></svg>',
+        '<svg width="31" height="14" viewBox="0 0 31 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="19.5" y="14" width="4" height="10" rx="1" transform="rotate(-90 19.5 14)" fill="#E3010F"/><rect x="4.5" y="14" width="4" height="14" rx="1" transform="rotate(180 4.5 14)" fill="#E3010F"/><rect x="27" width="4" height="14" rx="1" fill="#E3010F"/><rect x="1" y="4" width="4" height="30" rx="1" transform="rotate(-90 1 4)" fill="#E3010F"/></svg>'
+    ],
+    roomArea: [
+        'До 5 м²', 'До 8 м²', 'До 15 м²', 'Другое'
     ]
 }
 

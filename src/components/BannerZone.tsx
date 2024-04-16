@@ -1,3 +1,5 @@
+import Form from "./Form"
+
 export default function BannerZone() {
   return (
     <div className={`w-[100%]`}>
@@ -128,7 +130,7 @@ export default function BannerZone() {
       </div>
 
       <div
-        className={`static flex flex-col items-center w-[300px] h-[130px] p-5 rounded bg-white absolute bottom-[3%] left-[15%] justify-center sm:hidden`}
+        className={`static flex flex-col items-center w-[300px] h-[170px] p-5 rounded-2xl bg-white absolute bottom-[3%] left-[15%] justify-center sm:hidden`}
       >
         <h2 className={`text-[1.8rem] font-extrabold text-[#E3010F] mb-2`}>
           Акция
@@ -137,18 +139,9 @@ export default function BannerZone() {
           Скидка <span className={`text-[#E3010F]`}>35%</span> на Вашу кухню
         </span>
         <span className={`mb-2`}>до 01.01.2022</span>
-        <div className={`flex`}>
-          <input
-            type="text"
-            placeholder="Введите номер телефона"
-            className={`border-[1px] border-[#E3010F] w-[150px] h-[30px] p-2 outline-none`}
-          />
-          <button
-            className={`icon relative bg-[#E3010F] w-[100px] h-[30px] text-white`}
-          >
-            Получить скидку
-          </button>
-        </div>
+        <div className={`h-[100px] bg-white`}>
+<Form MobileVisible={false} textVisible={false} bannerZone={true}/>
+</div>
       </div>
     </div>
   );

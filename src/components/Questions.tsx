@@ -84,7 +84,7 @@ export default function Questions() {
         </div>
 
         <div
-          className={`w-[25%]  bg-cover rounded-full  h-[200px]
+          className={`w-[200px]  bg-cover rounded-full  h-[200px]
 sm:w-[200px] sm:h-[200px]`}
           style={{
             backgroundImage: `url('https://s3-alpha-sig.figma.com/img/cb7d/4096/c74601928a8af03203b67d50e784a035?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mFUbJUdSYmGnVlQjT-ztZL51N8gyDY3eUxz-WMQ0fWrDYhz~gWZbJyG8CS-5UGpZTXE~TX9oCPBogt50FKI9JsTBYpmEVp--oVp7XECMc8DxC~BvvcmsKkBL66BqfwSPioryIcdkivCGPVgEEp-~D7pX2leYrVtpvp4JjMHIdnLawz29psIkmTk8bY4YRctJaU2rcAuU~FNShKBDm78-Ai620pbBUpqPb3MdFgQRmLwUgi8fbIlDHQeA7rnmccqiLDmKbAVcE55A4umfH~aA-CMohuknbGdLV8jq~kFDZGYv-BqJcbQXGACEibYa4-ql8DB8gR-uZR2sEPeOIsJ4Cw__')`,

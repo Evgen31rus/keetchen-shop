@@ -4,6 +4,7 @@ import gsap from "gsap";
 import MainButton from "./MainButton";
 import DisainersCard from "./DisainersCard";
 import IDisainers from "../IDisainers";
+import Form from "./Form";
 
 type propsTypes = {
   props: IDisainers[];
@@ -210,34 +211,7 @@ sm:w-[100%]
               100% соответствие дизайн-проекта с реальностью.{" "}
             </li>
           </ul>
-          <p className={`text-[1.2rem] w-[60%] sm:hidden`}>
-            Оставьте свой номер телефона и наш дизайнер свяжется с Вами в
-            ближайшее время{" "}
-          </p>
-          <div
-            className={`top-menu-shadow w-[60%] h-[150px] rounded flex flex-col items-center p-5 mt-5 
-sm:hidden`}
-          >
-            <input
-              type="text"
-              placeholder={`Введите номер`}
-              className={`top-menu-shadow w-[100%] h-[30px] p-5 border-[1px] rounded `}
-            />
-            <MainButton
-              textNotActive={`Получить консультацию`}
-              colorText={`white`}
-              width={100}
-              heigt={30}
-              bgColor={`#E3010F`}
-              margin={5}
-            />
-            <MainButton
-              textNotActive={`Прикрепить свой проект`}
-              width={100}
-              heigt={30}
-              isBorder={true}
-            />
-          </div>
+<Form MobileVisible={false} textVisible={true} bannerZone={false}/>
         </div>
       </div>
 
