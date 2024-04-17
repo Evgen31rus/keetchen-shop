@@ -1,6 +1,4 @@
-import { RefObject, useRef, useState } from "react";
-import Ibackend from "../Ibackend";
-import ReviewsCard from "./ReviewsCard";
+
 
 export default function Questions() {
   return (

@@ -1,7 +1,3 @@
-import MainButton from "./MainButton";
-import img1 from "../img/main/HelpInSearch/Frame 21202.png";
-import img2 from "../img/main/HelpInSearch/Frame 21205.png";
-import img3 from "../img/main/HelpInSearch/Frame 21206.png";
 import HelpSearchCard from "./HelpSearchCard";
 import IHelpSearch from "../HelpSearch";
 

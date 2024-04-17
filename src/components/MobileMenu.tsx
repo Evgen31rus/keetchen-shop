@@ -1,47 +1,47 @@
-
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import MainButton from "./MainButton";
-import { ChangeEvent, useState } from "react";
-import { Root } from "react-dom/client";
-import { HadleIsSearchForm } from "../store/validFormSlice";
-import Imenu from "../menu";
 import { Link, animateScroll as scroll } from "react-scroll";
 import Ibackend from "../Ibackend";
-import { link } from "fs";
 import { HadleIsOpenModal } from "../store/isOpenModalSlice";
 
 type propsTypes = {
-    props: Ibackend
-}
+  props: Ibackend;
+};
 
-export default function ModileMenu({props}:propsTypes){
-    const dispatch = useDispatch()
-    useSelector((state:RootState) => state.counter)
-    const [isClick, setIsClick]=useState<boolean>(false)
-    const state = useSelector((state:RootState) => state)
-    return(
+export default function ModileMenu({ props }: propsTypes) {
+  const dispatch = useDispatch();
+  useSelector((state: RootState) => state.counter);
+  
+  const state = useSelector((state: RootState) => state);
+  return (
     <>
-<div className={`w-[100%] h-[100%] flex flex-col  items-center p-10`}>
+      <div className={`w-[100%] h-[100%] flex flex-col  items-center p-10`}>
+        <ul className={`h-[100%] flex flex-col justify-between`}>
+          <h1
+            className={`text-[2.5rem] font-bold text-[#E3010F] h-[60px] mt-5`}
+          >
+            Меню
+          </h1>
+          {props.menu.map((menu) => (
+            <li className={`flex h-[50px]`}>
+              {" "}
+              <Link
+                to={menu}
+                spy={true}
+                smooth={true}
+                offset={-160}
+                duration={500}
+                className={`text-[2.5rem] font-bold`}
+                onClick={() =>
+                  dispatch(HadleIsOpenModal(state.counter.thisModal.modal))
+                }
+              >
+                {menu}
+              </Link>
+            </li>
+          ))}
 
-<ul className={`h-[100%] flex flex-col justify-between`}>
-<h1 className={`text-[2.5rem] font-bold text-[#E3010F] h-[60px] mt-5`}>Меню</h1>
-    {
-        props.menu.map(menu=>(
-            <li className={`flex h-[50px]`}> <Link
-            to={menu}
-            spy={true}
-            smooth={true}
-            offset={-160}
-            duration={500}
-            className={`text-[2.5rem] font-bold`}
-            onClick={()=>dispatch(HadleIsOpenModal(state.counter.thisModal.modal))}
-            >{menu}
-            </Link></li>
-        ))
-    }
-
-<svg
+          <svg
             width="150"
             height="44"
             viewBox="0 0 133 44"
@@ -78,12 +78,8 @@ export default function ModileMenu({props}:propsTypes){
               fill="#E3010F"
             />
           </svg>
-    
-</ul>
-
-
-
-</div>
+        </ul>
+      </div>
     </>
-    )
+  );
 }

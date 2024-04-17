@@ -12,7 +12,7 @@ type propsTypes = {
 };
 
 export default function FiveStepsCard({ props, index }: propsTypes) {
-  const state = useSelector((state:RootState) => state.counter)
+  const state = useSelector((state: RootState) => state.counter);
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false);
   const [TriggerAnimation, setTriggerAnimation] = useState(false);
 
@@ -89,8 +89,12 @@ sm:w-[100%]
             {props.title}
           </h2>
         </div>
-        <p className={`w-[80%] overflow-hidden 
-        md:w-[100%] md:overflow-y-scroll`}>{props.info}</p>
+        <p
+          className={`w-[80%] overflow-hidden 
+        md:w-[100%] md:overflow-y-scroll`}
+        >
+          {props.info}
+        </p>
       </div>
     </div>
   );

@@ -1,24 +1,14 @@
-import { MouseEventHandler, useRef, useState } from "react";
-import { MouseEvent } from "react";
+import { useRef} from "react";
 import backend from "../backend";
 import MainButton from "./MainButton";
 import { RootState } from "../store/store";
 import { useSelector } from "react-redux";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { link } from "fs";
+
 
 export default function Nav() {
-   const state = useSelector((state:RootState) => state.counter)
+  const state = useSelector((state: RootState) => state.counter);
   const UlRef = useRef<HTMLUListElement | null>(null);
-  const [isClick, setIsClick] = useState<number|undefined>(UlRef.current?.offsetWidth);
-  const [widthElement, setWidthElement] = useState<number | undefined>(50);
-
-  const HandlerClickMenu = (e: MouseEvent<HTMLElement>) => {
-
-    setIsClick(e.currentTarget.offsetLeft);
-    setWidthElement(e.currentTarget.offsetWidth);
-  };
-
 
   return (
     <div className={` flex-col  `}>
@@ -145,7 +135,7 @@ export default function Nav() {
       </div>
 
       <div className={`flex flex-col w-[100%] mt-2 mb-2   sm:hidden`}>
-      <ul
+        <ul
           className={`flex  w-[100%] h-[30px] justify-around text-[1.2rem] uppercase`}
           ref={UlRef}
         >
@@ -153,25 +143,27 @@ export default function Nav() {
             <li
               className={`cursor-pointer border-[#E3010F] transition-all Z-20`}
               key={index}
-              onClick={HandlerClickMenu}
+
             >
-             <Link
-              to={el}
-              spy={true}
-              smooth={true}
-              offset={-160}
-              duration={500}
-              className={`w-[100%] h-[40px] Z-0`}
-              >{el}
+              <Link
+                to={el}
+                spy={true}
+                smooth={true}
+                offset={-160}
+                duration={500}
+                className={`w-[100%] h-[40px] Z-0`}
+              >
+                {el}
               </Link>
             </li>
           ))}
         </ul>
-       
       </div>
     </div>
   );
 }
 
-              {/* 
-        */}
+{
+  /*
+   */
+}

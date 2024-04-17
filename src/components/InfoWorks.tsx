@@ -1,5 +1,4 @@
-import { useLayoutEffect } from "react";
-import gsap from "gsap";
+
 
 export default function InfoWorks() {
   return (
@@ -144,7 +143,6 @@ export default function InfoWorks() {
       </div>
 
       <div className={`flex flex-col m-5 w-[100%]`}>
-
         <div
           className={`w-[80%]  h-[5px] items-start
 sm:hidden

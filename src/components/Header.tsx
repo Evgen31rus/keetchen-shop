@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { useLayoutEffect, useState } from "react";
 import Nav from "./Nav";
 import NavMobile from "./NavMobile";
-import headerBg from "../img/header/header.png";
 import BannerZone from "./BannerZone";
 import SaleZone from "./SaleZone";
 

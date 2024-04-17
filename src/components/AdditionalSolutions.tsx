@@ -1,10 +1,3 @@
-import MainButton from "./MainButton";
-import ImgFerstCard from "../img/main/AditionalSolutions/img-3.png";
-import ImgSecondCard from "../img/main/AditionalSolutions/img-1.png";
-import ImgThirdCard from "../img/main/AditionalSolutions/img-2.png";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useLayoutEffect, useState } from "react";
 import IAdditionalSolution from "../IAdditionalSolutions";
 import AditionalSolutionsCard from "./AdditionalSolutionsCard";
 type propsTypes = {
@@ -12,8 +5,6 @@ type propsTypes = {
 };
 
 export default function AdditionalSolution({ props }: propsTypes) {
-
-
   return (
     <div className={`flex flex-col w-[80%] items-start m-auto mt-`}>
       <h1 className={`  ml-5 w-[80%]  text-[2.5rem] font-extrabold`}>

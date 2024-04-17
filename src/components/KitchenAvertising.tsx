@@ -5,7 +5,7 @@ import { RootState } from "../store/store";
 import { useSelector } from "react-redux";
 
 export default function KitchenAvertising() {
-  const state = useSelector((state:RootState) => state.counter)
+  const state = useSelector((state: RootState) => state.counter);
   return (
     <div className={`flex flex-col w-[80%] items-start m-auto mt-`}>
       <h1 className={`  w-[80%]  text-[2.5rem] font-extrabold`}>

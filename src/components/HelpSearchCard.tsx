@@ -12,7 +12,7 @@ type propsTypes = {
 };
 
 export default function HelpSearchCard({ props, index }: propsTypes) {
-  const state = useSelector((state:RootState) => state.counter)
+  const state = useSelector((state: RootState) => state.counter);
   const [TriggerAnimation, setTriggerAnimation] = useState(false);
   gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {

@@ -12,7 +12,7 @@ type propsTypes = {
 };
 
 export default function KitchenAvertisingCard({ backend, index }: propsTypes) {
-  const state = useSelector((state:RootState) => state.counter)
+  const state = useSelector((state: RootState) => state.counter);
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false);
   const [TriggerAnimation, setTriggerAnimation] = useState(false);
   gsap.registerPlugin(ScrollTrigger);
@@ -72,12 +72,13 @@ sm:w-[100%]
                 heigt={40}
                 actions={state.thisModal.consultation}
               />
-
             </div>
           </div>
         </div>
 
-        <h3 className={`text-[1.3rem] font-bold mt-5 mb-5 md:w-[100%]`}>{backend.title}</h3>
+        <h3 className={`text-[1.3rem] font-bold mt-5 mb-5 md:w-[100%]`}>
+          {backend.title}
+        </h3>
         <p className={`w-[80%] md:w-[100%]`}>{backend.description}</p>
       </div>
     </>

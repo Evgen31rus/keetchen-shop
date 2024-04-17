@@ -1,4 +1,4 @@
-import Form from "./Form"
+import Form from "./Form";
 
 export default function BannerZone() {
   return (
@@ -140,8 +140,8 @@ export default function BannerZone() {
         </span>
         <span className={`mb-2`}>до 01.01.2022</span>
         <div className={`h-[100px] bg-white`}>
-<Form MobileVisible={false} textVisible={false} bannerZone={true}/>
-</div>
+          <Form MobileVisible={false} textVisible={false} bannerZone={true} />
+        </div>
       </div>
     </div>
   );

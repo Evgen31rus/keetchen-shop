@@ -14,8 +14,8 @@ export default function SaleZone() {
         </span>
         <span className={`mb-2`}>до 01.08.2024</span>
         <div className={`h-[100px] bg-white w-[80%]`}>
-<Form MobileVisible={false} textVisible={false} bannerZone={false}/>
-</div>
+          <Form MobileVisible={false} textVisible={false} bannerZone={false} />
+        </div>
       </div>
     </>
   );

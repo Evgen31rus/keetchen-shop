@@ -16,8 +16,7 @@ type propsTypes = {
   widthMobile?: number;
   hiddenMobile?: boolean;
   mdHidden?: boolean;
-  actions?:any,
-
+  actions?: any;
 };
 
 export default function MainButton({
@@ -35,16 +34,13 @@ export default function MainButton({
   hiddenMobile,
   mdHidden,
   actions,
-
 }: propsTypes) {
-  const dispatch = useDispatch()
-  const state = useSelector((state:RootState) => state)
+  const dispatch = useDispatch();
+  const state = useSelector((state: RootState) => state);
   return (
     <>
       <button
-      onClick={()=>
-        dispatch(HadleIsOpenModal(actions))
-      }
+        onClick={() => dispatch(HadleIsOpenModal(actions))}
         className={`
         ${isBorder ? "border-[1px] border-[#E3010F]" : ""}
         icon relative m-${margin} bg-[${bgColor}] w-[${width}%] h-[${heigt}px] text-${colorText} font-bold rounded text-[1.0rem]  opacity-100 z-10 transition-all 
@@ -55,10 +51,10 @@ export default function MainButton({
                 sm:${hiddenMobile ? "hidden" : "felx"}
 
                 `}
-                style={{
-                  fontSize: `clamp(0.8rem, 3vh, 1.0rem )`,
-                  color: `${colorText}`
-                }}
+        style={{
+          fontSize: `clamp(0.8rem, 3vh, 1.0rem )`,
+          color: `${colorText}`,
+        }}
       >
         {textNotActive}
       </button>

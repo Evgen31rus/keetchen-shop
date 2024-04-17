@@ -11,7 +11,6 @@ export default function Reviews({ props }: propsTypes) {
   const SliderRef = useRef(null) as RefObject<HTMLDivElement> | null;
   const [width, setWidth] = useState<number>(0);
 
-
   return (
     <div
       className={`flex flex-col w-[80%] min-h-[400px] items-start m-auto 

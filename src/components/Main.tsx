@@ -1,4 +1,3 @@
-
 import AdditionalSolution from "./AdditionalSolutions";
 import Designers from "./Designers";
 import HelpInSearching from "./HelpInSearching";
@@ -16,14 +15,13 @@ import Contacts from "./Сontacts";
 import { RootState } from "../store/store";
 import { useSelector } from "react-redux";
 import backend from "../backend";
-import Form from "./Form";
 
 type propsTypes = {
   props: Ibackend;
 };
 
 export default function Main({ props }: propsTypes) {
-  const state = useSelector((state:RootState) => state.counter)
+  const state = useSelector((state: RootState) => state.counter);
   return (
     <div
       className={`flex flex-col items-center justify-center w-[100%] overflow-hidden`}
@@ -50,22 +48,23 @@ sm:static sm:overflow-visible sm:w-[100%] `}
     md:hidden
     sm:flex sm:flex-col sm:w-[100%] sm:items-center
     `}
-    id={backend.menu[0]}
+            id={backend.menu[0]}
           >
-                      <h1
-            className={`ml-10 w-[80%]  text-[2.5rem] font-extrabold flex flex-col text-start 
+            <h1
+              className={`ml-10 w-[80%]  text-[2.5rem] font-extrabold flex flex-col text-start 
     sm:w-[100%]`}
-          >
-            Какие кухни
-            <span className={`block text-[#E3010F]`}>мы производим?</span>
-          </h1>
+            >
+              Какие кухни
+              <span className={`block text-[#E3010F]`}>мы производим?</span>
+            </h1>
             {props.products.map((el, index) => {
               return <ProductCard product={el} id={index} />;
             })}
           </div>
         </div>
-        <div className={`w-[100%]  max-w-[1000px] overflow-hidden`}
-       id={backend.menu[1]}
+        <div
+          className={`w-[100%]  max-w-[1000px] overflow-hidden`}
+          id={backend.menu[1]}
         >
           <HelpInSearching props={props.HelpSearch} />
         </div>
@@ -76,7 +75,6 @@ sm:static sm:overflow-visible sm:w-[100%] `}
           <Designers props={props.disainers} />
         </div>
 
-        
         <div
           className={`w-[100%]  max-w-[1000px] bg-cover bg-center overflow-hidden`}
           id={backend.menu[2]}
@@ -86,8 +84,10 @@ sm:static sm:overflow-visible sm:w-[100%] `}
         >
           <AdditionalSolution props={props.additionalSolution} />
         </div>
-        <div className={`w-[100%]  max-w-[1000px] overflow-hidden`}
-         id={backend.menu[3]}>
+        <div
+          className={`w-[100%]  max-w-[1000px] overflow-hidden`}
+          id={backend.menu[3]}
+        >
           <KitchenAvertising />
         </div>
         <div
@@ -99,20 +99,21 @@ sm:static sm:overflow-visible sm:w-[100%] `}
         >
           <FiveSteps props={props} />
         </div>
-        <div className={`w-[100%]  max-w-[1000px] overflow-hidden`}
-        id={backend.menu[5]}>
+        <div
+          className={`w-[100%]  max-w-[1000px] overflow-hidden`}
+          id={backend.menu[5]}
+        >
           <Reviews props={props} />
         </div>
-
 
         <div className={`w-[100%]  max-w-[1000px] overflow-hidden`}>
           <Questions />
         </div>
 
- 
-
-        <div className={`w-[100%]  max-w-[1000px] overflow-hidden`}
-        id={backend.menu[6]}>
+        <div
+          className={`w-[100%]  max-w-[1000px] overflow-hidden`}
+          id={backend.menu[6]}
+        >
           <Contacts />
         </div>
       </div>

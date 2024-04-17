@@ -12,7 +12,7 @@ type propsTypes = {
 };
 
 export default function AditionalSolutionsCard({ props, index }: propsTypes) {
-  const state = useSelector((state:RootState) => state.counter)
+  const state = useSelector((state: RootState) => state.counter);
   const [TriggerAnimation, setTriggerAnimation] = useState(false);
   gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
@@ -61,16 +61,15 @@ sm:w-[100%]  sm:h-[400px] md:h-[300px]
           {props.title}
         </h3>
         <div className={`w-[100%] `}>
-        <MainButton
-          textNotActive={`Получить консультацию`}
-          width={80}
-          heigt={40}
-          bgColor={`#E3010F`}
-          colorText={`white`}
-          margin={5}
-          actions={state.thisModal.consultation}
-          
-        />
+          <MainButton
+            textNotActive={`Получить консультацию`}
+            width={80}
+            heigt={40}
+            bgColor={`#E3010F`}
+            colorText={`white`}
+            margin={5}
+            actions={state.thisModal.consultation}
+          />
         </div>
       </div>
     </div>

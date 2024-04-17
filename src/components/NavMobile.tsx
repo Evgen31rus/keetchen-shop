@@ -4,14 +4,13 @@ import MainButton from "./MainButton";
 import { HadleIsOpenModal } from "../store/isOpenModalSlice";
 
 export default function NavMobile() {
-  const state = useSelector((state:RootState) => state.counter)
-  const dispatch = useDispatch()
+  const state = useSelector((state: RootState) => state.counter);
+  const dispatch = useDispatch();
   return (
     <>
       <div className={`hidden w-[100%] flex justify-between p-3 sm:flex`}>
         <div className={`flex-col w-[50%] items-start justify-between `}>
-          <div className={`flex flex-col mb-5`}
-          >
+          <div className={`flex flex-col mb-5`}>
             <svg
               width="133"
               height="44"
@@ -91,8 +90,7 @@ export default function NavMobile() {
           </div>
         </div>
 
-        <div className={`flex flex-col w-[50%]  items-end`}
-        >
+        <div className={`flex flex-col w-[50%]  items-end`}>
           <svg
             width="36"
             height="35"
@@ -100,7 +98,9 @@ export default function NavMobile() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={`z-10`}
-            onClick={()=>dispatch(HadleIsOpenModal(state.thisModal.mobileMenu))}
+            onClick={() =>
+              dispatch(HadleIsOpenModal(state.thisModal.mobileMenu))
+            }
           >
             <rect
               x="1"
@@ -137,7 +137,6 @@ export default function NavMobile() {
               colorText={`white`}
               bgColor={`#E3010F`}
               actions={state.thisModal.costСalculation}
-              
             />
           </div>
         </div>
