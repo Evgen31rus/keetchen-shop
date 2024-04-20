@@ -109,7 +109,7 @@ export default function ({ props, propsSVG, propsRoomArea }: propsTypes) {
             timeout={300}
             classNames="alert"
           >
-            <div className={`flex w-[30%] mr-8`} ref={modalRef}>
+            <div className={`flex w-[30%] sm:w-[50%] mr-8`} ref={modalRef}>
               <div
                 className={`  w-[30%] flex text-[1.5rem] border-[#E3010F] border-2   flex items-center justify-around rounded
     
